@@ -6,7 +6,7 @@ import styled from "styled-components";
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>Boilerplate</Head>
+      <h1>Boilerplate</h1>
     </div>
   );
 }
