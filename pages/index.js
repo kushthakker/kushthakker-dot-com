@@ -1,7 +1,5 @@
 import Head from "next/head";
 // import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import styled from "styled-components";
 // import useSWR from "swr";
 // import fetch from "../libs/fetch";
 
@@ -19,8 +17,8 @@ export default function Home() {
   // }
 
   return (
-    <div className={styles.container}>
-      <h1>Boilerplate</h1>
+    <div className="flex w-screen h-screen justify-center items-center text-red">
+      <div>Boilerplate for Tailwind css</div>
     </div>
   );
 }
