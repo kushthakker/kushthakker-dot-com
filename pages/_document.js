@@ -4,7 +4,12 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en" className="w-screen h-screen overflow-y-auto">
-        <Head />
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
