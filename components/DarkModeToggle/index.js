@@ -2,7 +2,6 @@ import { useTheme } from "next-themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 const DarkModeButton = () => {
   const { theme, setTheme } = useTheme();

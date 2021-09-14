@@ -14,11 +14,13 @@
     "@fortawesome/react-fontawesome": "^0.1.15",
     "@supabase/supabase-js": "^1.22.5",
     "dayjs": "^1.10.6",
+    "framer-motion": "^4.1.17",
     "next": "11.1.2",
     "next-themes": "^0.0.15",
     "react": "17.0.2",
     "react-animated-cursor": "^2.2.0",
     "react-dom": "17.0.2",
+    "react-intersection-observer": "^8.32.1",
     "swr": "^1.0.0"
   },
   "devDependencies": {
