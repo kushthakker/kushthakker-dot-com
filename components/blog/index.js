@@ -5,9 +5,9 @@ const Blog = () => {
     <buttton
       aria-label="Contact"
       type="button"
-      className="fixed z-50 top-4 right-33 py-2 px-4 text-xl"
+      className="fixed z-50 top-5 right-40 py-2 px-4 text-xl"
     >
-      <Link href="/">Blog</Link>
+      <Link href="/blog">Blog</Link>
     </buttton>
   );
 };

@@ -103,7 +103,7 @@ export default function Home() {
           // style={y >= 490 ? { display: "none" } : null}
           initial={{ opacity: 0, y: 270 }}
           animate={{
-            opacity: y >= 750 ? 0 : 1,
+            opacity: y >= 740 ? 0 : 1,
             y: 250,
             transition: { delay: 1.2, ...transition },
           }}
@@ -129,7 +129,7 @@ export default function Home() {
           // style={y >= 900 ? { display: "none" } : null}
           initial={{ opacity: 0, y: 480 }}
           animate={{
-            opacity: y >= 1500 ? 0 : 1,
+            opacity: y >= 1470 ? 0 : 1,
             y: 460,
             transition: { delay: 1.2, ...transition },
           }}
@@ -150,7 +150,7 @@ export default function Home() {
           // style={y >= 1200 ? { display: "none" } : null}
           initial={{ opacity: 0, y: 680 }}
           animate={{
-            opacity: y >= 2200 ? 0 : 1,
+            opacity: y >= 2180 ? 0 : 1,
             y: 660,
             transition: { delay: 1.2, ...transition },
           }}
