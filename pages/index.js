@@ -14,6 +14,7 @@ import {
 } from "framer-motion";
 import { Fragment } from "react";
 import { useInView } from "react-intersection-observer";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default function Home() {
   // const [ffLayer, setFfLayer] = useState(0);
@@ -173,7 +174,13 @@ export default function Home() {
           }}
         >
           <h1 className="font-heading text-4xl flex justify-center items-center mt-96 tracking-wider mb-96">
-            I am open for work.
+            <RoughNotation
+              type="box"
+              show={y >= 2570 ? true : false}
+              color="yellow"
+            >
+              I am open for work.
+            </RoughNotation>
           </h1>
         </motion.div>
       </div>
