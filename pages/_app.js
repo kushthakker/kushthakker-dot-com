@@ -7,6 +7,7 @@ import DarkModeButton from "../components/DarkModeToggle";
 import Contact from "../components/Contact";
 import Blog from "../components/Blog";
 import Github from "../components/Github";
+import Nav from "../components/Nav";
 import dynamic from "next/dynamic";
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
@@ -21,10 +22,11 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <DarkModeButton />
+      {/* <DarkModeButton />
       <Contact />
       <Blog />
-      <Github />
+      <Github /> */}
+      <Nav />
       <AnimatedCursor
         innerSize={10}
         outerSize={25}

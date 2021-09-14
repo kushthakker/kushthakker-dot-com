@@ -2,11 +2,7 @@ import Link from "next/link";
 
 const Blog = () => {
   return (
-    <buttton
-      aria-label="Contact"
-      type="button"
-      className="fixed z-50 top-5 right-40 py-2 px-4 text-xl"
-    >
+    <buttton aria-label="Contact" type="button" className="py-2 px-4 text-xl">
       <Link href="/blog">Blog</Link>
     </buttton>
   );

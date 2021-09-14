@@ -121,10 +121,10 @@ export default function Home() {
           >
             <div className="flex justify-center items-center max-w-full">
               <p className="text-4xl w-1/2 font-body">
-                I'm a front-end developer based in Ahmedabad, India. I grew up
-                in Ahmedabad graduating with a degree in computer-science. I
-                have a passion for design and web-development. I spend my free
-                time watching football, formula 1 and designing things.
+                I'm a front-end developer based in Ahmedabad. I grew up in this
+                town, graduating with a degree in Computer Science. I have a
+                passion for design and web development. I spend my free time
+                watching football, formula 1, and designing things.
               </p>
             </div>
           </motion.div>
@@ -178,16 +178,19 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-      <button
+      <motion.button
         onClick={() => scrollToTop()}
-        className={`fixed top-52 right-12 w-16 border px-4 py-2 flex flex-col rounded justify-center items-center ${
-          y >= 300 ? "block" : "hidden"
-        }`}
+        className={`fixed top-52 right-12 w-16 border px-4 py-2 flex flex-col rounded justify-center items-center`}
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: y >= 300 ? 1 : 0,
+          transition: { delay: 1.2, ...transition },
+        }}
       >
         <div>scroll</div>
         <div>to</div>
         <div>top</div>
-      </button>
+      </motion.button>
     </>
   );
 }
