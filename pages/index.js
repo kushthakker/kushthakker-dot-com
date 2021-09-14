@@ -69,14 +69,14 @@ export default function Home() {
   // }
 
   return (
-    <Fragment>
+    <div className="grid grid-flow-row">
       <div
         className={`flex w-screen h-screen justify-center items-center text-blue`}
       >
         <motion.h1
           className={`font-heading text-6xl`}
           style={{
-            // scale: scaleAnim,
+            scale: scaleAnim,
             y: y <= 450 ? 220 : -230,
             position: y >= 450 ? "fixed" : "relative",
           }}
@@ -84,52 +84,58 @@ export default function Home() {
           Hey, I'm Kush Thakker
         </motion.h1>
       </div>
-      <motion.div
-        ref={ref1}
-        animate={controls1}
-        initial="hidden"
-        transition={transition}
-        variants={{
-          visible: { opacity: 1, scale: 1 },
-          hidden: { opacity: 0, scale: 0 },
-        }}
-        style={y >= 800 ? { display: "none" } : null}
-      >
-        <h2 className="font-heading text-4xl flex justify-center items-center mt-96 mb-96">
-          About me
-        </h2>
-        <p></p>
-      </motion.div>
-      <motion.div
-        ref={ref2}
-        animate={controls2}
-        initial="hidden"
-        transition={transition}
-        variants={{
-          visible: { opacity: 1, scale: 1 },
-          hidden: { opacity: 0, scale: 0 },
-        }}
-        style={y >= 900 ? { display: "none" } : null}
-      >
-        <h1 className="font-heading text-4xl flex justify-center items-center mt-96 mb-96">
-          My Skills
-        </h1>
-      </motion.div>
-      <motion.div
-        ref={ref3}
-        animate={controls3}
-        initial="hidden"
-        transition={transition}
-        variants={{
-          visible: { opacity: 1, scale: 1 },
-          hidden: { opacity: 0, scale: 0 },
-        }}
-        style={y >= 1200 ? { display: "none" } : null}
-      >
-        <h1 className="font-heading text-4xl flex justify-center items-center mt-96">
-          Projects
-        </h1>
-      </motion.div>
-    </Fragment>
+      <div>
+        <motion.div
+          ref={ref1}
+          animate={controls1}
+          initial="hidden"
+          transition={transition}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+          style={y >= 490 ? { display: "none" } : null}
+        >
+          <div className="flex justify-center items-center max-w-full">
+            <p className="text-4xl w-1/2 font-body">
+              I'm a front-end developer based in Ahmedabad. I grew up in
+              Ahmedabad graduating with a degree in computer-science. I have a
+              passion for design and web-development. I spend my free time
+              watching football, formula 1 and designing things.
+            </p>
+          </div>
+        </motion.div>
+        <motion.div
+          ref={ref2}
+          animate={controls2}
+          initial="hidden"
+          transition={transition}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+          style={y >= 900 ? { display: "none" } : null}
+        >
+          <h1 className="font-heading text-4xl flex justify-center items-center mt-96 mb-96">
+            My Skills
+          </h1>
+        </motion.div>
+        <motion.div
+          ref={ref3}
+          animate={controls3}
+          initial="hidden"
+          transition={transition}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+          style={y >= 1200 ? { display: "none" } : null}
+        >
+          <h1 className="font-heading text-4xl flex justify-center items-center mt-96">
+            Projects
+          </h1>
+        </motion.div>
+      </div>
+    </div>
   );
 }

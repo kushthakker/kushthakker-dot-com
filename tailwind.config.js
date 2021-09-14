@@ -6,6 +6,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       heading: ["Pacifico", "cursive"],
+      body: ["Teko", "sans-serif"],
     },
   },
   variants: {
