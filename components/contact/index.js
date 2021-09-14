@@ -5,7 +5,7 @@ const Contact = () => {
     <buttton
       aria-label="Contact"
       type="button"
-      className="absolute top-5 right-6 py-2 px-4 text-xl"
+      className="fixed top-5 right-6 py-2 px-4 text-xl"
     >
       <Link href="/">Contact</Link>
     </buttton>
