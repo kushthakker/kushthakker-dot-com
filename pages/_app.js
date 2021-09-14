@@ -6,6 +6,7 @@ import "tailwindcss/tailwind.css";
 import DarkModeButton from "../components/DarkModeToggle";
 import Contact from "../components/Contact";
 import Blog from "../components/Blog";
+import Github from "../components/Github";
 import dynamic from "next/dynamic";
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }) {
       <DarkModeButton />
       <Contact />
       <Blog />
+      <Github />
       <AnimatedCursor
         innerSize={10}
         outerSize={25}
