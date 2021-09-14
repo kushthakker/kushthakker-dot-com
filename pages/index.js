@@ -86,19 +86,25 @@ export default function Home() {
       </div>
       <div>
         <motion.div
-          ref={ref1}
-          animate={controls1}
-          initial="hidden"
-          transition={transition}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
+          // ref={ref1}
+          // animate={controls1}
+          // initial="hidden"
+          // transition={transition}
+          // variants={{
+          //   visible: { opacity: 1, scale: 1 },
+          //   hidden: { opacity: 0, scale: 0 },
+          // }}
+          // style={y >= 490 ? { display: "none" } : null}
+          initial={{ opacity: 0, y: 270 }}
+          animate={{
+            opacity: y >= 750 ? 0 : 1,
+            y: 250,
+            transition: { delay: 1.2, ...transition },
           }}
-          style={y >= 490 ? { display: "none" } : null}
         >
           <div className="flex justify-center items-center max-w-full">
             <p className="text-4xl w-1/2 font-body">
-              I'm a front-end developer based in Ahmedabad. I grew up in
+              I'm a front-end developer based in Ahmedabad, India. I grew up in
               Ahmedabad graduating with a degree in computer-science. I have a
               passion for design and web-development. I spend my free time
               watching football, formula 1 and designing things.
@@ -106,15 +112,21 @@ export default function Home() {
           </div>
         </motion.div>
         <motion.div
-          ref={ref2}
-          animate={controls2}
-          initial="hidden"
-          transition={transition}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
+          // ref={ref2}
+          // animate={controls2}
+          // initial="hidden"
+          // transition={transition}
+          // variants={{
+          //   visible: { opacity: 1, scale: 1 },
+          //   hidden: { opacity: 0, scale: 0 },
+          // }}
+          // style={y >= 900 ? { display: "none" } : null}
+          initial={{ opacity: 0, y: 480 }}
+          animate={{
+            opacity: y >= 1585 ? 0 : 1,
+            y: 460,
+            transition: { delay: 1.2, ...transition },
           }}
-          style={y >= 900 ? { display: "none" } : null}
         >
           <h1 className="font-heading text-4xl flex justify-center items-center mt-96 mb-96">
             My Skills
@@ -122,14 +134,20 @@ export default function Home() {
         </motion.div>
         <motion.div
           ref={ref3}
-          animate={controls3}
-          initial="hidden"
-          transition={transition}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
+          // animate={controls3}
+          // initial="hidden"
+          // transition={transition}
+          // variants={{
+          //   visible: { opacity: 1, scale: 1 },
+          //   hidden: { opacity: 0, scale: 0 },
+          // }}
+          // style={y >= 1200 ? { display: "none" } : null}
+          initial={{ opacity: 0, y: 770 }}
+          animate={{
+            opacity: 1,
+            y: 750,
+            transition: { delay: 1.2, ...transition },
           }}
-          style={y >= 1200 ? { display: "none" } : null}
         >
           <h1 className="font-heading text-4xl flex justify-center items-center mt-96">
             Projects
