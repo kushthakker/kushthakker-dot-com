@@ -80,6 +80,11 @@ export default function Home() {
             y: y <= 450 ? 220 : -230,
             position: y >= 450 ? "fixed" : "relative",
           }}
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: y >= 2200 ? 0 : 1,
+            transition: { delay: 1.2, ...transition },
+          }}
         >
           Hey, I'm Kush Thakker
         </motion.h1>
@@ -154,14 +159,20 @@ export default function Home() {
           </h1>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 680 }}
+          initial={{ opacity: 0, y: 780 }}
           animate={{
             opacity: 1,
             y: 760,
             transition: { delay: 1.2, ...transition },
           }}
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          <h1 className="font-heading text-4xl flex justify-center items-center mt-96 tracking-wider">
+          <h1 className="font-heading text-4xl flex justify-center items-center mt-96 tracking-wider mb-96">
             I am open for work.
           </h1>
         </motion.div>
