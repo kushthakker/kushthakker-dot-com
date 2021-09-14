@@ -2,7 +2,8 @@ import Head from "next/head";
 // import Image from "next/image";
 // import useSWR from "swr";
 // import fetch from "../libs/fetch";
-import { useState, useEffect } from "react";
+// import ReactRough, { Rectangle } from "react-rough";
+import { useState } from "react";
 import {
   motion,
   useTransform,
@@ -12,9 +13,9 @@ import {
   useSpring,
   motionValue,
 } from "framer-motion";
-import { Fragment } from "react";
-import { useInView } from "react-intersection-observer";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const [y, setY] = useState(0);
@@ -36,6 +37,10 @@ export default function Home() {
 
   return (
     <div className="grid grid-flow-row">
+      <motion.path
+        d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
+        style={{ pathLength: scrollYProgress }}
+      />
       <div
         className={`flex w-screen h-screen justify-center items-center text-blue`}
       >
@@ -57,15 +62,18 @@ export default function Home() {
       </div>
       <div>
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, y: -110 }}
           animate={{
-            opacity: y >= 200 ? 0 : 1,
-            y: -130,
-            transition: { delay: 1.2, ...transition },
+            opacity: y >= 10 ? 0 : 1,
+            y: -120,
+            transition: { delay: 1, ...transition },
           }}
         >
-          <div className="flex justify-center items-center max-w-full">
-            Scroll to see more
+          <div className="flex justify-center items-center max-w-full flex-col">
+            <div>Scroll to see more</div>
+            <div className="animate-bounce mt-1">
+              <FontAwesomeIcon icon={faArrowDown} />
+            </div>
           </div>
         </motion.div>
         <motion.div
@@ -73,7 +81,7 @@ export default function Home() {
           animate={{
             opacity: y >= 740 ? 0 : 1,
             y: 250,
-            transition: { delay: 1.2, ...transition },
+            transition: { delay: 1, ...transition },
           }}
         >
           <div className="flex justify-center items-center max-w-full">
@@ -102,7 +110,7 @@ export default function Home() {
           animate={{
             opacity: y >= 2180 ? 0 : 1,
             y: 660,
-            transition: { delay: 1.2, ...transition },
+            transition: { delay: 1, ...transition },
           }}
         >
           <h1 className="font-heading text-4xl flex justify-center items-center mt-96">
@@ -114,7 +122,7 @@ export default function Home() {
           animate={{
             opacity: 1,
             y: 760,
-            transition: { delay: 1.2, ...transition },
+            transition: { delay: 1, ...transition },
           }}
           style={{
             display: "flex",
