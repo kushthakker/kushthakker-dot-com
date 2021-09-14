@@ -79,12 +79,12 @@ export default function Home() {
         <div
           className={`flex w-screen h-screen justify-center items-center text-blue`}
         >
-          <motion.h1
+          <motion.div
             className={`font-heading text-6xl`}
             style={{
               scale: scaleAnim,
               y: y <= 450 ? 220 : -230,
-              position: y >= 450 ? "fixed" : "relative",
+              position: y >= 455 ? "fixed" : "relative",
             }}
             initial={{ opacity: 0 }}
             animate={{
@@ -93,7 +93,7 @@ export default function Home() {
             }}
           >
             Hey, I'm Kush Thakker
-          </motion.h1>
+          </motion.div>
         </div>
         <div>
           <motion.div
