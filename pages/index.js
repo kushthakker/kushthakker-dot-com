@@ -50,8 +50,6 @@ export default function Home() {
     });
   };
 
-  console.log(`theme`, theme);
-
   return (
     <>
       <div className="fixed top-52 left-12 w-12">
@@ -91,6 +89,7 @@ export default function Home() {
               scale: scaleAnim,
               y: y <= 450 ? 220 : -230,
               position: y >= 455 ? "fixed" : "relative",
+              zIndex: "50",
             }}
             initial={{ opacity: 0 }}
             animate={{
@@ -127,10 +126,10 @@ export default function Home() {
           >
             <div className="flex justify-center items-center max-w-full">
               <p className="text-4xl w-1/2 font-body">
-                I'm a front-end developer based in Ahmedabad. I grew up in this
-                town, graduating with a degree in Computer Science. I have a
-                passion for design and web development. I spend my free time
-                watching football, formula 1, and designing things.
+                I'm a front-end developer based in Ahmedabad. I grew up in
+                Ahmedabad , graduating with a degree in Computer Science. I have
+                a strong passion for design and web development. I spend my free
+                time watching football, formula 1, and designing random stuff.
               </p>
             </div>
           </motion.div>
@@ -139,7 +138,7 @@ export default function Home() {
             animate={{
               opacity: y >= 1494 ? 0 : 1,
               y: 460,
-              transition: { delay: 1.2, ...transition },
+              transition: { delay: 0.3, ...transition },
             }}
           >
             <div className="flex justify-center items-center mt-60 mb-96 w-screen">
@@ -149,7 +148,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 390 }}
             animate={{
-              opacity: y >= 1885 ? 0 : 1,
+              opacity: y >= 1850 ? 0 : 1,
               y: 380,
               transition: { delay: 0.3, ...transition },
             }}
@@ -237,9 +236,9 @@ export default function Home() {
               <div className="mt-4">
                 <a target="_blank" href="https://gamify-dev.vercel.app/">
                   <Image
-                    src="https://source.unsplash.com/random"
-                    width="200"
-                    height="200"
+                    src="/img/gamify.png"
+                    width="400"
+                    height="400"
                     alt="ramdom"
                     layout="responsive"
                   />
@@ -260,7 +259,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 980 }}
             animate={{
-              opacity: y >= 3510 ? 0 : 1,
+              opacity: y >= 3500 ? 0 : 1,
               y: 990,
               transition: transition,
               width: "content-fit",
@@ -360,7 +359,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{
           opacity: y >= 300 ? 1 : 0,
-          transition: { delay: 1.2, ...transition },
+          transition: transition,
         }}
       >
         <div>scroll</div>

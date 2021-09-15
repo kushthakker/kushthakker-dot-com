@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import "tailwindcss/tailwind.css";
 import Nav from "../components/Nav";
 import dynamic from "next/dynamic";
+import { useTheme } from "next-themes";
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -13,6 +14,8 @@ const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
 config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
+  const { theme, setTheme } = useTheme();
+  console.log(`homepage`, theme);
   return (
     <ThemeProvider attribute="class">
       <Head>

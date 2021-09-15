@@ -10,9 +10,9 @@ const Nav = () => {
         <DarkModeButton />
       </div>
       <div className="flex justify-end w-full mr-12">
+        <Contact />
         <Github />
         <Blog />
-        <Contact />
         <Home />
       </div>
     </div>
