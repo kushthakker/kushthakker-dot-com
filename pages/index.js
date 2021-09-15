@@ -94,8 +94,8 @@ export default function Home() {
             }}
             initial={{ opacity: 0 }}
             animate={{
-              opacity: y >= 4480 ? 0 : 1,
-              transition: { delay: 1.2, ...transition },
+              opacity: y >= 4400 ? 0 : 1,
+              transition: { delay: 0.5, ...transition },
             }}
           >
             Hey, I'm Kush Thakker
@@ -107,7 +107,7 @@ export default function Home() {
             animate={{
               opacity: y >= 10 ? 0 : 1,
               y: -120,
-              transition: { delay: 1, ...transition },
+              transition: { delay: 0.3, ...transition },
             }}
           >
             <div className="flex justify-center items-center max-w-full flex-col">
@@ -122,7 +122,7 @@ export default function Home() {
             animate={{
               opacity: y >= 860 ? 0 : 1,
               y: 250,
-              transition: { delay: 1, ...transition },
+              transition: { delay: 0.3, ...transition },
             }}
           >
             <div className="flex justify-center items-center max-w-full">
@@ -151,7 +151,7 @@ export default function Home() {
             animate={{
               opacity: y >= 1885 ? 0 : 1,
               y: 380,
-              transition: { delay: 1.2, ...transition },
+              transition: { delay: 0.3, ...transition },
             }}
           >
             <div className="mt-16 w-screen text-center">
@@ -215,7 +215,7 @@ export default function Home() {
             animate={{
               opacity: y >= 2494 ? 0 : 1,
               y: 630,
-              transition: { delay: 1, ...transition },
+              transition: { delay: 0.3, ...transition },
             }}
           >
             <h1 className="font-heading text-4xl flex justify-center items-center mt-50">
