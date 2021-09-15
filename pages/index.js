@@ -143,17 +143,17 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 390 }}
             animate={{
-              opacity: y >= 2000 ? 0 : 1,
+              opacity: y >= 1950 ? 0 : 1,
               y: 380,
               transition: { delay: 1.2, ...transition },
             }}
           >
             <div className="mt-16 w-screen text-center">
-              <RoughNotationGroup show={y >= 1600 ? true : false} color="blue">
+              <RoughNotationGroup show={y >= 1700 ? true : false} color="blue">
                 <div className="grid grid-cols-3 gap-3 h-96 w-2/3 mx-auto justify-center content-center">
                   <div>
                     <div className="grid col-span-1 col-start-1">
-                      <div className="grid grid-flow-row gap-8 text-2xl w-min items-center justify-self-center">
+                      <div className="grid grid-flow-row gap-8 text-2xl items-center justify-self-center">
                         <h1 className="font-body text-4xl mb-8">Languages</h1>
                         <RoughNotation type="circle" order="3">
                           <h3>HTML</h3>
@@ -169,7 +169,7 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="grid col-span-1 col-start-2">
-                      <div className="grid grid-flow-row gap-8 text-2xl w-min justify-self-center">
+                      <div className="grid grid-flow-row gap-8 text-2xl justify-self-center">
                         <h1 className="font-body text-4xl mb-8">Library</h1>
                         <RoughNotation type="underline" order="1">
                           <h3>React</h3>
@@ -183,12 +183,15 @@ export default function Home() {
                         <RoughNotation type="underline" order="1">
                           <h3>React Query</h3>
                         </RoughNotation>
+                        <RoughNotation type="underline" order="1">
+                          <h3>Framer Motion</h3>
+                        </RoughNotation>
                       </div>
                     </div>
                   </div>
                   <div>
                     <div className="grid col-span-1 col-start-3">
-                      <div className="grid grid-flow-row gap-8 text-2xl w-min justify-self-center">
+                      <div className="grid grid-flow-row gap-8 text-2xl justify-self-center">
                         <h1 className="font-body text-4xl mb-8">Framework</h1>
                         <RoughNotation type="underline" order="1">
                           <h3>Next Js</h3>
@@ -227,10 +230,10 @@ export default function Home() {
               alignItems: "center",
             }}
           >
-            <h1 className="font-heading text-4xl flex justify-center items-center mt-96 tracking-wider mb-96">
+            <h1 className="font-heading text-4xl flex justify-center items-center mt-96 tracking-wider mb-96 text-blue-600">
               <RoughNotation
-                type="box"
-                show={y >= 2770 ? true : false}
+                type="highlight"
+                show={y >= 3350 ? true : false}
                 color="yellow"
               >
                 I am open for work.
