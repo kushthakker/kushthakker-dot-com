@@ -4,6 +4,7 @@ import Image from "next/image";
 // import fetch from "../libs/fetch";
 // import ReactRough, { Rectangle } from "react-rough";
 import { useState, useEffect, useRef } from "react";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import {
   motion,
@@ -22,6 +23,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 export default function Home() {
   const [y, setY] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   const { scrollY, scrollYProgress } = useViewportScroll();
   const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 0.8]);
@@ -48,6 +50,8 @@ export default function Home() {
     });
   };
 
+  console.log(`theme`, theme);
+
   return (
     <>
       <div className="fixed top-52 left-12 w-12">
@@ -55,7 +59,7 @@ export default function Home() {
           <motion.path
             fill="none"
             strokeWidth="5"
-            stroke="white"
+            stroke={theme === "dark" ? "white" : "black"}
             strokeDasharray="0 1"
             d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
             style={{
@@ -69,7 +73,7 @@ export default function Home() {
           <motion.path
             fill="none"
             strokeWidth="5"
-            stroke="white"
+            stroke={theme === "dark" ? "white" : "black"}
             d="M14,26 L 22,33 L 35,16"
             initial={false}
             strokeDasharray="0 1"
@@ -90,7 +94,7 @@ export default function Home() {
             }}
             initial={{ opacity: 0 }}
             animate={{
-              opacity: y >= 4540 ? 0 : 1,
+              opacity: y >= 4480 ? 0 : 1,
               transition: { delay: 1.2, ...transition },
             }}
           >
@@ -223,7 +227,7 @@ export default function Home() {
             animate={{
               opacity: y >= 2820 ? 0 : 1,
               y: 850,
-              transition: { delay: 0.5, ...transition },
+              transition: transition,
               width: "content-fit",
               margin: "0 auto",
             }}
@@ -256,9 +260,9 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 980 }}
             animate={{
-              opacity: y >= 3490 ? 0 : 1,
+              opacity: y >= 3510 ? 0 : 1,
               y: 990,
-              transition: { delay: 0.5, ...transition },
+              transition: transition,
               width: "content-fit",
               margin: "0 auto",
             }}
@@ -291,9 +295,9 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 1130 }}
             animate={{
-              opacity: y >= 4175 ? 0 : 1,
-              y: 1120,
-              transition: { delay: 0.5, ...transition },
+              opacity: y >= 4195 ? 0 : 1,
+              y: 1110,
+              transition: transition,
               width: "content-fit",
               margin: "0 auto",
             }}
@@ -352,7 +356,7 @@ export default function Home() {
       </div>
       <motion.button
         onClick={() => scrollToTop()}
-        className={`fixed top-52 right-12 w-16 border px-4 py-2 flex flex-col rounded justify-center items-center`}
+        className={`fixed top-52 right-12 w-16 border border-black dark:border-white px-4 py-2 flex flex-col rounded justify-center items-center`}
         initial={{ opacity: 0 }}
         animate={{
           opacity: y >= 300 ? 1 : 0,
