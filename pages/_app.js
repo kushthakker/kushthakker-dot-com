@@ -20,9 +20,9 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Nav />
       <AnimatedCursor
-        innerSize={12}
-        outerSize={27}
-        color="255,255,255"
+        innerSize={14}
+        outerSize={26}
+        color="116,158,156"
         outerAlpha={0.2}
         innerScale={0.7}
         outerScale={5}

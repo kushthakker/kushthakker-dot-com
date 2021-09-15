@@ -1,5 +1,5 @@
 import Head from "next/head";
-// import Image from "next/image";
+import Image from "next/image";
 // import useSWR from "swr";
 // import fetch from "../libs/fetch";
 // import ReactRough, { Rectangle } from "react-rough";
@@ -16,6 +16,47 @@ import {
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+
+const textMotion = {
+  rest: {
+    color: "white",
+    opacity: 1,
+    // display: "none",
+    transition: {
+      duration: 0.2,
+      type: "tween",
+      ease: "easeIn",
+    },
+  },
+  hover: {
+    opacity: 0,
+    display: "none",
+    transition: {
+      duration: 0.4,
+      type: "tween",
+      ease: "easeOut",
+    },
+  },
+};
+
+const imageMotion = {
+  rest: {
+    opacity: 1,
+    ease: "easeOut",
+    duration: 0.2,
+    type: "tween",
+    display: "none",
+  },
+  hover: {
+    opacity: 1,
+    display: "block",
+    transition: {
+      duration: 0.4,
+      type: "tween",
+      ease: "easeIn",
+    },
+  },
+};
 
 export default function Home() {
   const [y, setY] = useState(0);
@@ -88,7 +129,7 @@ export default function Home() {
             }}
             initial={{ opacity: 0 }}
             animate={{
-              opacity: y >= 2600 ? 0 : 1,
+              opacity: y >= 3000 ? 0 : 1,
               transition: { delay: 1.2, ...transition },
             }}
           >
@@ -143,13 +184,13 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 390 }}
             animate={{
-              opacity: y >= 1950 ? 0 : 1,
+              opacity: y >= 1990 ? 0 : 1,
               y: 380,
               transition: { delay: 1.2, ...transition },
             }}
           >
             <div className="mt-16 w-screen text-center">
-              <RoughNotationGroup show={y >= 1700 ? true : false} color="blue">
+              <RoughNotationGroup show={y >= 1800 ? true : false}>
                 <div className="grid grid-cols-3 gap-3 h-96 w-2/3 mx-auto justify-center content-center">
                   <div>
                     <div className="grid col-span-1 col-start-1">
@@ -207,15 +248,48 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 680 }}
             animate={{
-              opacity: y >= 2680 ? 0 : 1,
+              opacity: y >= 2580 ? 0 : 1,
               y: 660,
               transition: { delay: 1, ...transition },
             }}
           >
-            <h1 className="font-heading text-4xl flex justify-center items-center mt-96">
+            <h1 className="font-heading text-4xl flex justify-center items-center mt-50">
               Projects
             </h1>
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 620 }}
+            animate={{
+              opacity: y >= 3000 ? 0 : 1,
+              y: 600,
+              transition: { delay: 1, ...transition },
+            }}
+          >
+            <motion.div
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              className="font-body text-5xl flex justify-center items-center mt-96"
+            >
+              <motion.div
+                variants={imageMotion}
+                className="w-4/12 h-4/12 flex justify-self-center"
+              >
+                <img
+                  src="https://source.unsplash.com/random"
+                  alt="Random"
+                  // width={400}
+                  // height={400}
+                  // layout="responsive"
+                  className={"z-10"}
+                />
+              </motion.div>
+              <motion.h1 variants={textMotion} className={"z-20"}>
+                Gamify
+              </motion.h1>
+            </motion.div>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 780 }}
             animate={{
