@@ -25,7 +25,7 @@ export default function Home() {
 
   const { scrollY, scrollYProgress } = useViewportScroll();
   const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 0.8]);
-  const yRange = useTransform(scrollYProgress, [0, 1.4], [0, 1]);
+  const yRange = useTransform(scrollYProgress, [0, 1.22], [0, 1]);
   const pathLength = useSpring(yRange, { stiffness: 400, damping: 120 });
 
   useEffect(() => yRange.onChange((v) => setIsComplete(v >= 1)), [yRange]);
@@ -90,7 +90,7 @@ export default function Home() {
             }}
             initial={{ opacity: 0 }}
             animate={{
-              opacity: y >= 3000 ? 0 : 1,
+              opacity: y >= 4540 ? 0 : 1,
               transition: { delay: 1.2, ...transition },
             }}
           >
@@ -116,7 +116,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 270 }}
             animate={{
-              opacity: y >= 740 ? 0 : 1,
+              opacity: y >= 860 ? 0 : 1,
               y: 250,
               transition: { delay: 1, ...transition },
             }}
@@ -133,25 +133,25 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 480 }}
             animate={{
-              opacity: y >= 1600 ? 0 : 1,
+              opacity: y >= 1494 ? 0 : 1,
               y: 460,
               transition: { delay: 1.2, ...transition },
             }}
           >
-            <div className="flex justify-center items-center mt-96 mb-96 w-screen">
+            <div className="flex justify-center items-center mt-60 mb-96 w-screen">
               <h1 className="font-heading text-4xl">My Skills</h1>
             </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 390 }}
             animate={{
-              opacity: y >= 1940 ? 0 : 1,
+              opacity: y >= 1885 ? 0 : 1,
               y: 380,
               transition: { delay: 1.2, ...transition },
             }}
           >
             <div className="mt-16 w-screen text-center">
-              <RoughNotationGroup show={y >= 1800 ? true : false}>
+              <RoughNotationGroup show={y >= 1680 ? true : false}>
                 <div className="grid grid-cols-3 gap-3 h-96 w-2/3 mx-auto justify-center content-center">
                   <div>
                     <div className="grid col-span-1 col-start-1">
@@ -209,7 +209,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 640 }}
             animate={{
-              opacity: y >= 2580 ? 0 : 1,
+              opacity: y >= 2494 ? 0 : 1,
               y: 630,
               transition: { delay: 1, ...transition },
             }}
@@ -221,15 +221,85 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 840 }}
             animate={{
-              opacity: y >= 2940 ? 0 : 1,
+              opacity: y >= 2820 ? 0 : 1,
               y: 850,
-              transition: { delay: 1, ...transition },
+              transition: { delay: 0.5, ...transition },
               width: "content-fit",
               margin: "0 auto",
             }}
           >
             <div className="flex flex-col my-4 max-w-sm max-h-lg justify-center mt-50 mx-auto">
               <div>01/03</div>
+              <div className="mt-4">
+                <a target="_blank" href="https://gamify-dev.vercel.app/">
+                  <Image
+                    src="https://source.unsplash.com/random"
+                    width="200"
+                    height="200"
+                    alt="ramdom"
+                    layout="responsive"
+                  />
+                </a>
+              </div>
+              <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl">
+                <div className="flex justify-start w-full items-center">
+                  <a target="_blank" href="https://gamify-dev.vercel.app/">
+                    Forkify
+                  </a>
+                </div>
+                <div className="flex justify-end w-full items-center -rotate-45 relative top-14 left-4">
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 950 }}
+            animate={{
+              opacity: y >= 3490 ? 0 : 1,
+              y: 960,
+              transition: { delay: 0.5, ...transition },
+              width: "content-fit",
+              margin: "0 auto",
+            }}
+          >
+            <div className="flex flex-col my-4 max-w-sm max-h-lg justify-center mt-50 mx-auto">
+              <div>02/03</div>
+              <div className="mt-4">
+                <a target="_blank" href="https://gamify-dev.vercel.app/">
+                  <Image
+                    src="https://source.unsplash.com/random"
+                    width="200"
+                    height="200"
+                    alt="ramdom"
+                    layout="responsive"
+                  />
+                </a>
+              </div>
+              <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl">
+                <div className="flex justify-start w-full items-center">
+                  <a target="_blank" href="https://gamify-dev.vercel.app/">
+                    Live Streaming
+                  </a>
+                </div>
+                <div className="flex justify-end w-full items-center -rotate-45 relative top-14 left-4">
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 1140 }}
+            animate={{
+              opacity: y >= 4175 ? 0 : 1,
+              y: 1090,
+              transition: { delay: 0.5, ...transition },
+              width: "content-fit",
+              margin: "0 auto",
+            }}
+          >
+            <div className="flex flex-col my-4 max-w-sm max-h-lg justify-center mt-50 mx-auto">
+              <div>03/03</div>
               <div className="mt-4">
                 <a target="_blank" href="https://gamify-dev.vercel.app/">
                   <Image
@@ -255,10 +325,10 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 780 }}
+            initial={{ opacity: 0, y: 870 }}
             animate={{
               opacity: 1,
-              y: 760,
+              y: 870,
               transition: { delay: 1, ...transition },
             }}
             style={{
@@ -271,7 +341,7 @@ export default function Home() {
             <h1 className="font-heading text-4xl flex justify-center items-center mt-96 tracking-wider mb-96 text-blue-600">
               <RoughNotation
                 type="highlight"
-                show={y >= 3350 ? true : false}
+                show={y >= 4650 ? true : false}
                 color="yellow"
               >
                 I am open for work.
