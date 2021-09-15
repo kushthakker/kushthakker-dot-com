@@ -4,6 +4,7 @@ import Image from "next/image";
 // import fetch from "../libs/fetch";
 // import ReactRough, { Rectangle } from "react-rough";
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import {
   motion,
   useTransform,
@@ -16,47 +17,7 @@ import {
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-
-const textMotion = {
-  rest: {
-    color: "white",
-    opacity: 1,
-    // display: "none",
-    transition: {
-      duration: 0.2,
-      type: "tween",
-      ease: "easeIn",
-    },
-  },
-  hover: {
-    opacity: 0,
-    display: "none",
-    transition: {
-      duration: 0.4,
-      type: "tween",
-      ease: "easeOut",
-    },
-  },
-};
-
-const imageMotion = {
-  rest: {
-    opacity: 1,
-    ease: "easeOut",
-    duration: 0.2,
-    type: "tween",
-    display: "none",
-  },
-  hover: {
-    opacity: 1,
-    display: "block",
-    transition: {
-      duration: 0.4,
-      type: "tween",
-      ease: "easeIn",
-    },
-  },
-};
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const [y, setY] = useState(0);
@@ -184,7 +145,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 390 }}
             animate={{
-              opacity: y >= 1990 ? 0 : 1,
+              opacity: y >= 1940 ? 0 : 1,
               y: 380,
               transition: { delay: 1.2, ...transition },
             }}
@@ -246,10 +207,10 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 680 }}
+            initial={{ opacity: 0, y: 640 }}
             animate={{
               opacity: y >= 2580 ? 0 : 1,
-              y: 660,
+              y: 630,
               transition: { delay: 1, ...transition },
             }}
           >
@@ -258,36 +219,39 @@ export default function Home() {
             </h1>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 620 }}
+            initial={{ opacity: 0, y: 840 }}
             animate={{
-              opacity: y >= 3000 ? 0 : 1,
-              y: 600,
+              opacity: y >= 2940 ? 0 : 1,
+              y: 850,
               transition: { delay: 1, ...transition },
+              width: "content-fit",
+              margin: "0 auto",
             }}
           >
-            <motion.div
-              initial="rest"
-              whileHover="hover"
-              animate="rest"
-              className="font-body text-5xl flex justify-center items-center mt-96"
-            >
-              <motion.div
-                variants={imageMotion}
-                className="w-4/12 h-4/12 flex justify-self-center"
-              >
-                <img
-                  src="https://source.unsplash.com/random"
-                  alt="Random"
-                  // width={400}
-                  // height={400}
-                  // layout="responsive"
-                  className={"z-10"}
-                />
-              </motion.div>
-              <motion.h1 variants={textMotion} className={"z-20"}>
-                Gamify
-              </motion.h1>
-            </motion.div>
+            <div className="flex flex-col my-4 max-w-sm max-h-lg justify-center mt-50 mx-auto">
+              <div>01/03</div>
+              <div className="mt-4">
+                <a target="_blank" href="https://gamify-dev.vercel.app/">
+                  <Image
+                    src="https://source.unsplash.com/random"
+                    width="200"
+                    height="200"
+                    alt="ramdom"
+                    layout="responsive"
+                  />
+                </a>
+              </div>
+              <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl">
+                <div className="flex justify-start w-full items-center">
+                  <a target="_blank" href="https://gamify-dev.vercel.app/">
+                    Gamify
+                  </a>
+                </div>
+                <div className="flex justify-end w-full items-center -rotate-45 relative top-14 left-4">
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
