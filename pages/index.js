@@ -244,7 +244,7 @@ export default function Home() {
               <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl">
                 <div className="flex justify-start w-full items-center">
                   <a target="_blank" href="https://gamify-dev.vercel.app/">
-                    Forkify
+                    Gamify
                   </a>
                 </div>
                 <div className="flex justify-end w-full items-center -rotate-45 relative top-14 left-4">
@@ -254,10 +254,10 @@ export default function Home() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 950 }}
+            initial={{ opacity: 0, y: 980 }}
             animate={{
               opacity: y >= 3490 ? 0 : 1,
-              y: 960,
+              y: 990,
               transition: { delay: 0.5, ...transition },
               width: "content-fit",
               margin: "0 auto",
@@ -279,7 +279,7 @@ export default function Home() {
               <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl">
                 <div className="flex justify-start w-full items-center">
                   <a target="_blank" href="https://gamify-dev.vercel.app/">
-                    Live Streaming
+                    Forkify
                   </a>
                 </div>
                 <div className="flex justify-end w-full items-center -rotate-45 relative top-14 left-4">
@@ -289,10 +289,10 @@ export default function Home() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 1140 }}
+            initial={{ opacity: 0, y: 1130 }}
             animate={{
               opacity: y >= 4175 ? 0 : 1,
-              y: 1090,
+              y: 1120,
               transition: { delay: 0.5, ...transition },
               width: "content-fit",
               margin: "0 auto",
@@ -314,7 +314,7 @@ export default function Home() {
               <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl">
                 <div className="flex justify-start w-full items-center">
                   <a target="_blank" href="https://gamify-dev.vercel.app/">
-                    Gamify
+                    Mapty
                   </a>
                 </div>
                 <div className="flex justify-end w-full items-center -rotate-45 relative top-14 left-4">
@@ -325,10 +325,10 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 870 }}
+            initial={{ opacity: 0, y: 890 }}
             animate={{
               opacity: 1,
-              y: 870,
+              y: 900,
               transition: { delay: 1, ...transition },
             }}
             style={{
