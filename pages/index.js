@@ -356,7 +356,7 @@ export default function Home() {
       </div>
       <motion.button
         onClick={() => scrollToTop()}
-        className={`fixed top-52 right-12 w-16 border border-black dark:border-white px-4 py-2 flex flex-col rounded justify-center items-center`}
+        className={`fixed top-52 right-12 w-16 border border-black dark:border-white px-4 py-2 flex flex-col rounded justify-center items-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black shadow-2xl dark:shadow-none transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105 active:translate-y-4`}
         initial={{ opacity: 0 }}
         animate={{
           opacity: y >= 300 ? 1 : 0,
