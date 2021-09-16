@@ -232,28 +232,30 @@ export default function Home() {
               margin: "0 auto",
             }}
           >
-            <div className="flex flex-col my-4 max-w-sm max-h-lg justify-center mt-50 mx-auto">
+            <div className="flex flex-col my-4 max-w-lg max-h-lg justify-center mt-50 mx-auto">
               <div>01/03</div>
               <div className="mt-4">
                 <a target="_blank" href="https://gamify-dev.vercel.app/">
                   <Image
                     src="/img/gamify.png"
-                    width="400"
-                    height="400"
+                    width="700"
+                    height="500"
                     alt="gamify"
                     layout="responsive"
                   />
                 </a>
               </div>
-              <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl">
+              <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl px-8">
                 <div className="flex justify-start w-full items-center">
-                  <a target="_blank" href="https://gamify-dev.vercel.app/">
+                  <a target="_blank" href="https://gamify-dev.vercel.app/ ">
                     Gamify
                   </a>
                 </div>
-                <div className="flex justify-end w-full items-center -rotate-45 relative top-14 left-4">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                </div>
+                <a target="_blank" href="https://gamify-dev.vercel.app/">
+                  <div className="flex justify-end w-full items-center -rotate-45 relative top-1">
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </div>
+                </a>
               </div>
             </div>
           </motion.div>
@@ -267,33 +269,35 @@ export default function Home() {
               margin: "0 auto",
             }}
           >
-            <div className="flex flex-col my-4 max-w-sm max-h-lg justify-center mt-50 mx-auto">
+            <div className="flex flex-col my-4 max-w-lg max-h-lg justify-center mt-50 mx-auto">
               <div>02/03</div>
               <div className="mt-4">
                 <a target="_blank" href="https://kushsforkify.netlify.app/">
                   <Image
                     src="/img/forkify.png"
-                    width="400"
-                    height="400"
+                    width="700"
+                    height="500"
                     alt="forkify"
                     layout="responsive"
                   />
                 </a>
               </div>
-              <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl">
+              <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl px-8">
                 <div className="flex justify-start w-full items-center">
-                  <a target="_blank" href="https://gamify-dev.vercel.app/">
+                  <a target="_blank" href="https://kushsforkify.netlify.app/">
                     Forkify
                   </a>
                 </div>
-                <div className="flex justify-end w-full items-center -rotate-45 relative top-14 left-4">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                </div>
+                <a target="_blank" href="https://kushsforkify.netlify.app/">
+                  <div className="flex justify-end w-full items-center -rotate-45 relative top-1">
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </div>
+                </a>
               </div>
             </div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 1130 }}
+            initial={{ opacity: 0, y: 1100 }}
             animate={{
               opacity: y >= 4210 ? 0 : 1,
               y: 1110,
@@ -302,28 +306,30 @@ export default function Home() {
               margin: "0 auto",
             }}
           >
-            <div className="flex flex-col my-4 max-w-sm max-h-lg justify-center mt-50 mx-auto">
+            <div className="flex flex-col my-4 max-w-lg max-h-lg justify-center mt-50 mx-auto">
               <div>03/03</div>
               <div className="mt-4">
                 <a target="_blank" href="https://maptybykush.netlify.app/">
                   <Image
-                    src="https://source.unsplash.com/random"
-                    width="200"
-                    height="200"
-                    alt="ramdom"
+                    src="/img/mapty.png"
+                    width="700"
+                    height="500"
+                    alt="mapty"
                     layout="responsive"
                   />
                 </a>
               </div>
-              <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl">
+              <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl px-8">
                 <div className="flex justify-start w-full items-center">
-                  <a target="_blank" href="https://gamify-dev.vercel.app/">
+                  <a target="_blank" href="https://maptybykush.netlify.app/">
                     Mapty
                   </a>
                 </div>
-                <div className="flex justify-end w-full items-center -rotate-45 relative top-14 left-4">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                </div>
+                <a target="_blank" href="https://maptybykush.netlify.app/">
+                  <div className="flex justify-end w-full items-center -rotate-45 relative top-1">
+                    <FontAwesomeIcon icon={faArrowRight} />
+                  </div>
+                </a>
               </div>
             </div>
           </motion.div>
