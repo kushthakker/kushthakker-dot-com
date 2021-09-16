@@ -53,6 +53,18 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Kush Thakker</title>
+        <meta name="description" content="Kush Thakker's personal website" />
+        <meta name="keywords" content="kush, thakker, personal, website" />
+        <meta property="og:title" content="Kush Thakker" />
+        <meta
+          property="og:description"
+          content="Kush Thakker's personal website"
+        />
+        <meta property="og:image" content="/img/user.png" />
+        <meta property="og:url" content="https://kushthakker.com" />
+      </Head>
       <div className="fixed top-52 left-12 w-12">
         <svg className="progress-icon" viewBox="0 0 60 60">
           <motion.path
