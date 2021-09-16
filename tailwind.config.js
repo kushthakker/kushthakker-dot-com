@@ -7,6 +7,7 @@ module.exports = {
     fontFamily: {
       heading: ["Pacifico", "cursive"],
       body: ["Teko", "sans-serif"],
+      new: ["Jost", "sans-serif"],
     },
   },
   variants: {

@@ -107,7 +107,7 @@ export default function Home() {
             animate={{
               opacity: y >= 10 ? 0 : 1,
               y: -120,
-              transition: { delay: 0.3, ...transition },
+              transition: { delay: 0.2, ...transition },
             }}
           >
             <div className="flex justify-center items-center max-w-full flex-col">
@@ -126,7 +126,7 @@ export default function Home() {
             }}
           >
             <div className="flex justify-center items-center max-w-full">
-              <p className="text-4xl w-1/2 font-body">
+              <p className="text-4xl w-3/5 font-new text-center">
                 I'm a front-end developer based in Ahmedabad. I grew up in
                 Ahmedabad , graduating with a degree in Computer Science. I have
                 a strong passion for design and web development. I spend my free
