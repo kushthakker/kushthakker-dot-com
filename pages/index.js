@@ -233,9 +233,9 @@ export default function Home() {
             }}
           >
             <div className="flex flex-col my-4 max-w-lg max-h-lg justify-center mt-50 mx-auto">
-              <div className="w-full flex justify-between items-center">
+              <div className="w-full flex justify-between items-center px-4">
                 <div>01/03</div>
-                <div className="text-xs uppercase w-40 text-center ">
+                <div className="text-xs uppercase w-40 text-right">
                   React, Chakra UI, Redux, Magic Link
                 </div>
               </div>
@@ -273,9 +273,9 @@ export default function Home() {
             }}
           >
             <div className="flex flex-col my-4 max-w-lg max-h-lg justify-center mt-50 mx-auto">
-              <div className="w-full flex justify-between items-center">
+              <div className="w-full flex justify-between items-center px-4">
                 <div>02/03</div>
-                <div className="text-xs uppercase w-40 text-center">
+                <div className="text-xs uppercase w-40 text-right">
                   Vanila JS
                 </div>
               </div>
@@ -289,7 +289,7 @@ export default function Home() {
                 />
               </div>
               <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl px-8">
-                <div className="flex justify-start w-full items-center">
+                <div className="flex justify-start w-full items-center ">
                   <a target="_blank" href="https://kushsforkify.netlify.app/">
                     Forkify
                   </a>
@@ -306,16 +306,16 @@ export default function Home() {
             initial={{ opacity: 0, y: 1100 }}
             animate={{
               opacity: y >= 4210 ? 0 : 1,
-              y: 1110,
+              y: 1150,
               transition: transition,
               width: "content-fit",
               margin: "0 auto",
             }}
           >
             <div className="flex flex-col my-4 max-w-lg max-h-lg justify-center mt-50 mx-auto">
-              <div className="w-full flex justify-between items-center">
+              <div className="w-full flex justify-between items-center px-4">
                 <div>03/03</div>
-                <div className="text-xs uppercase w-40 text-center">
+                <div className="text-xs uppercase w-40 text-right">
                   Vanila JS, Mapbox Api
                 </div>
               </div>
