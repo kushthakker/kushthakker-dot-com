@@ -28,7 +28,7 @@ export default function Home() {
 
   const { scrollY, scrollYProgress } = useViewportScroll();
   const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 0.8]);
-  const yRange = useTransform(scrollYProgress, [0, 1.29], [0, 1]);
+  const yRange = useTransform(scrollYProgress, [0, 1.3], [0, 1]);
   const pathLength = useSpring(yRange, { stiffness: 400, damping: 120 });
 
   useEffect(() => yRange.onChange((v) => setIsComplete(v >= 1)), [yRange]);
@@ -336,7 +336,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 1100 }}
             animate={{
-              opacity: y >= 4210 ? 0 : 1,
+              opacity: y >= 4230 ? 0 : 1,
               y: 1150,
               transition: transition,
               width: "content-fit",
@@ -391,7 +391,7 @@ export default function Home() {
             <h1 className="font-heading text-4xl flex justify-center items-center mt-48 tracking-wider mb-96 text-blue-600">
               <RoughNotation
                 type="highlight"
-                show={y >= 4650 ? true : false}
+                show={y >= 4665 ? true : false}
                 color="yellow"
               >
                 I am open for work.
