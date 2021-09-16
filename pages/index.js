@@ -65,6 +65,8 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://i.ibb.co/6mKVzT1/home.png" />
         <meta property="og:url" content="https://kushthakker.com" />
+
+        <meta name="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:title"
           content="Kush Thakker | Frontend Web Developer"
