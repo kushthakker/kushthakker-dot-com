@@ -225,7 +225,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 840 }}
             animate={{
-              opacity: y >= 2820 ? 0 : 1,
+              opacity: y >= 2860 ? 0 : 1,
               y: 850,
               transition: transition,
               width: "content-fit",
@@ -233,17 +233,20 @@ export default function Home() {
             }}
           >
             <div className="flex flex-col my-4 max-w-lg max-h-lg justify-center mt-50 mx-auto">
-              <div>01/03</div>
+              <div className="w-full flex justify-between items-center">
+                <div>01/03</div>
+                <div className="text-xs uppercase w-40 text-center ">
+                  React, Chakra UI, Redux, Magic Link
+                </div>
+              </div>
               <div className="mt-4">
-                <a target="_blank" href="https://gamify-dev.vercel.app/">
-                  <Image
-                    src="/img/gamify.png"
-                    width="700"
-                    height="500"
-                    alt="gamify"
-                    layout="responsive"
-                  />
-                </a>
+                <Image
+                  src="/img/gamify.png"
+                  width="700"
+                  height="500"
+                  alt="gamify"
+                  layout="responsive"
+                />
               </div>
               <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl px-8">
                 <div className="flex justify-start w-full items-center">
@@ -260,27 +263,30 @@ export default function Home() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 980 }}
+            initial={{ opacity: 0, y: 990 }}
             animate={{
               opacity: y >= 3540 ? 0 : 1,
-              y: 990,
+              y: 1000,
               transition: transition,
               width: "content-fit",
               margin: "0 auto",
             }}
           >
             <div className="flex flex-col my-4 max-w-lg max-h-lg justify-center mt-50 mx-auto">
-              <div>02/03</div>
+              <div className="w-full flex justify-between items-center">
+                <div>02/03</div>
+                <div className="text-xs uppercase w-40 text-center">
+                  Vanila JS
+                </div>
+              </div>
               <div className="mt-4">
-                <a target="_blank" href="https://kushsforkify.netlify.app/">
-                  <Image
-                    src="/img/forkify.png"
-                    width="700"
-                    height="500"
-                    alt="forkify"
-                    layout="responsive"
-                  />
-                </a>
+                <Image
+                  src="/img/forkify.png"
+                  width="700"
+                  height="500"
+                  alt="forkify"
+                  layout="responsive"
+                />
               </div>
               <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl px-8">
                 <div className="flex justify-start w-full items-center">
@@ -307,17 +313,20 @@ export default function Home() {
             }}
           >
             <div className="flex flex-col my-4 max-w-lg max-h-lg justify-center mt-50 mx-auto">
-              <div>03/03</div>
+              <div className="w-full flex justify-between items-center">
+                <div>03/03</div>
+                <div className="text-xs uppercase w-40 text-center">
+                  Vanila JS, Mapbox Api
+                </div>
+              </div>
               <div className="mt-4">
-                <a target="_blank" href="https://maptybykush.netlify.app/">
-                  <Image
-                    src="/img/mapty.png"
-                    width="700"
-                    height="500"
-                    alt="mapty"
-                    layout="responsive"
-                  />
-                </a>
+                <Image
+                  src="/img/mapty.png"
+                  width="700"
+                  height="500"
+                  alt="mapty"
+                  layout="responsive"
+                />
               </div>
               <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl px-8">
                 <div className="flex justify-start w-full items-center">
