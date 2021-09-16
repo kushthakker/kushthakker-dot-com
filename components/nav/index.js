@@ -1,8 +1,8 @@
-import DarkModeButton from "../darkModeToggle";
-import Contact from "../contact";
-import Blog from "../blog";
-import Github from "../github";
-import Home from "../home";
+import DarkModeButton from "../DarkModeToggle";
+import Contact from "../Contact";
+import Blog from "../Blog";
+import Github from "../Github";
+import Home from "../Home";
 const Nav = () => {
   return (
     <div className="w-screen fixed top-5 flex z-50">

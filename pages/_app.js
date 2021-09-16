@@ -3,8 +3,8 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import { ThemeProvider } from "next-themes";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "tailwindcss/tailwind.css";
-import Nav from "../components/nav";
-import Cursor from "../components/cursor";
+import Nav from "../components/Nav";
+import Cursor from "../components/Cursor";
 
 config.autoAddCss = false;
 
