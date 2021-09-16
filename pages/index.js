@@ -19,13 +19,12 @@ import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import ManageMode from "../components/ManageMode";
 
 export default function Home() {
+  const { getTheme, theme } = ManageMode();
   const [y, setY] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
-  const { theme, setTheme } = useTheme();
-
-  const [getTheme, setGetTheme] = useState("");
 
   const { scrollY, scrollYProgress } = useViewportScroll();
   const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 0.8]);
@@ -33,12 +32,6 @@ export default function Home() {
   const pathLength = useSpring(yRange, { stiffness: 400, damping: 120 });
 
   useEffect(() => yRange.onChange((v) => setIsComplete(v >= 1)), [yRange]);
-  useEffect(() => {
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme === "dark") {
-      setGetTheme("dark");
-    } else setGetTheme("light");
-  }, [theme]);
 
   const transition = {
     duration: 1,
@@ -79,7 +72,7 @@ export default function Home() {
           <motion.path
             fill="none"
             strokeWidth="5"
-            stroke={theme === "dark" ? "white" : "black"}
+            stroke={getTheme === "dark" ? "white" : "black"}
             d="M14,26 L 22,33 L 35,16"
             initial={false}
             strokeDasharray="0 1"

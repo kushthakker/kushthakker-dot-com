@@ -6,7 +6,7 @@ class MyDocument extends Document {
       <Html
         lang="en"
         className="w-screen h-screen overflow-y-auto"
-        class="dark"
+        className="dark"
       >
         <Head>
           <link

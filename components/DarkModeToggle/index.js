@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
+import ManageMode from "../ManageMode";
 
 const DarkModeButton = () => {
-  const { theme, setTheme } = useTheme();
-  const [getTheme, setGetTheme] = useState("");
-  useEffect(() => {
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme === "dark") {
-      setGetTheme("dark");
-    } else setGetTheme("light");
-  }, [theme]);
+  const { theme, setTheme, getTheme } = ManageMode();
   return (
     <button
       aria-label="Toggle Dark Mode"
