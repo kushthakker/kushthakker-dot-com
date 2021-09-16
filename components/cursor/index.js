@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import ManageMode from "../ManageMode";
+import ManageMode from "../manageMode";
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,

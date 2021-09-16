@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
-import ManageMode from "../ManageMode";
+import ManageMode from "../manageMode";
 
 const DarkModeButton = () => {
   const { theme, setTheme, getTheme } = ManageMode();
