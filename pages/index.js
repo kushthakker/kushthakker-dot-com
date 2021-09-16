@@ -65,7 +65,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://i.ibb.co/xGYNcXp/Screenshot-2021-09-17-at-2-37-26-AM.png"
+          content="https://i.ibb.co/8bnHtW1/Webp-net-resizeimage.png"
         />
         <meta property="og:url" content="https://kushthakker.com" />
 
@@ -80,7 +80,7 @@ export default function Home() {
         />
         <meta
           property="twitter:image"
-          content="https://i.ibb.co/xGYNcXp/Screenshot-2021-09-17-at-2-37-26-AM.png"
+          content="https://i.ibb.co/8bnHtW1/Webp-net-resizeimage.png"
         />
         <meta property="twitter:url" content="https://kushthakker.com" />
       </Head>
