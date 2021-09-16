@@ -80,7 +80,7 @@ export default function Home() {
         />
         <meta
           property="twitter:image"
-          content="https://i.ibb.co/wyrfsRd/Webp-net-resizeimage-1.png"
+          content="https://i.ibb.co/x1ykPjY/main-preview.png"
         />
         <meta property="twitter:url" content="https://kushthakker.com" />
       </Head>
