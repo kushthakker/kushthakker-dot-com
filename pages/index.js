@@ -63,7 +63,10 @@ export default function Home() {
           content="Kush Thakker's personal website"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://i.ibb.co/6mKVzT1/home.png" />
+        <meta
+          property="og:image"
+          content="https://i.ibb.co/xGYNcXp/Screenshot-2021-09-17-at-2-37-26-AM.png"
+        />
         <meta property="og:url" content="https://kushthakker.com" />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -77,7 +80,7 @@ export default function Home() {
         />
         <meta
           property="twitter:image"
-          content="https://i.ibb.co/6mKVzT1/home.png"
+          content="https://i.ibb.co/xGYNcXp/Screenshot-2021-09-17-at-2-37-26-AM.png"
         />
         <meta property="twitter:url" content="https://kushthakker.com" />
       </Head>
