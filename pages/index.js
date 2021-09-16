@@ -63,7 +63,7 @@ export default function Home() {
           content="Kush Thakker's personal website"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/img/user.png" />
+        <meta property="og:image" content="https://i.ibb.co/6mKVzT1/home.png" />
         <meta property="og:url" content="https://kushthakker.com" />
         <meta
           property="twitter:title"
@@ -73,7 +73,10 @@ export default function Home() {
           property="twitter:description"
           content="Kush Thakker's personal website"
         />
-        <meta property="twitter:image" content="/img/user.png" />
+        <meta
+          property="twitter:image"
+          content="https://i.ibb.co/6mKVzT1/home.png"
+        />
         <meta property="twitter:url" content="https://kushthakker.com" />
       </Head>
       <div className="fixed top-52 left-12 w-12">
