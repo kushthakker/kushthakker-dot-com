@@ -25,12 +25,20 @@ export default function Home() {
   const [isComplete, setIsComplete] = useState(false);
   const { theme, setTheme } = useTheme();
 
+  const [getTheme, setGetTheme] = useState("");
+
   const { scrollY, scrollYProgress } = useViewportScroll();
   const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 0.8]);
   const yRange = useTransform(scrollYProgress, [0, 1.22], [0, 1]);
   const pathLength = useSpring(yRange, { stiffness: 400, damping: 120 });
 
   useEffect(() => yRange.onChange((v) => setIsComplete(v >= 1)), [yRange]);
+  useEffect(() => {
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme === "dark") {
+      setGetTheme("dark");
+    } else setGetTheme("light");
+  }, [theme]);
 
   const transition = {
     duration: 1,
@@ -57,7 +65,7 @@ export default function Home() {
           <motion.path
             fill="none"
             strokeWidth="5"
-            stroke={theme === "dark" ? "white" : "black"}
+            stroke={getTheme === "dark" ? "white" : "black"}
             strokeDasharray="0 1"
             d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
             style={{
