@@ -240,7 +240,7 @@ export default function Home() {
                     src="/img/gamify.png"
                     width="400"
                     height="400"
-                    alt="ramdom"
+                    alt="gamify"
                     layout="responsive"
                   />
                 </a>
@@ -260,7 +260,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 980 }}
             animate={{
-              opacity: y >= 3500 ? 0 : 1,
+              opacity: y >= 3540 ? 0 : 1,
               y: 990,
               transition: transition,
               width: "content-fit",
@@ -270,12 +270,12 @@ export default function Home() {
             <div className="flex flex-col my-4 max-w-sm max-h-lg justify-center mt-50 mx-auto">
               <div>02/03</div>
               <div className="mt-4">
-                <a target="_blank" href="https://gamify-dev.vercel.app/">
+                <a target="_blank" href="https://kushsforkify.netlify.app/">
                   <Image
-                    src="https://source.unsplash.com/random"
-                    width="200"
-                    height="200"
-                    alt="ramdom"
+                    src="/img/forkify.png"
+                    width="400"
+                    height="400"
+                    alt="forkify"
                     layout="responsive"
                   />
                 </a>
@@ -295,7 +295,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 1130 }}
             animate={{
-              opacity: y >= 4195 ? 0 : 1,
+              opacity: y >= 4210 ? 0 : 1,
               y: 1110,
               transition: transition,
               width: "content-fit",
@@ -305,7 +305,7 @@ export default function Home() {
             <div className="flex flex-col my-4 max-w-sm max-h-lg justify-center mt-50 mx-auto">
               <div>03/03</div>
               <div className="mt-4">
-                <a target="_blank" href="https://gamify-dev.vercel.app/">
+                <a target="_blank" href="https://maptybykush.netlify.app/">
                   <Image
                     src="https://source.unsplash.com/random"
                     width="200"
