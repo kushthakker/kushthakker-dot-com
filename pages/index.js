@@ -130,7 +130,7 @@ export default function Home() {
                 I'm a front-end developer based in Ahmedabad. I grew up in
                 Ahmedabad , graduating with a degree in Computer Science. I have
                 a strong passion for design and web development. I spend my free
-                time watching football, formula 1, and designing random stuf.
+                time watching football, formula 1, and designing random stuff.
               </p>
             </div>
           </motion.div>
