@@ -65,7 +65,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://i.ibb.co/8bnHtW1/Webp-net-resizeimage.png"
+          content="https://i.ibb.co/x1ykPjY/main-preview.png"
         />
         <meta property="og:url" content="https://kushthakker.com" />
 
