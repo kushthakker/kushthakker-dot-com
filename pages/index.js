@@ -181,7 +181,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 270 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 900 : 945) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 900 : 955) ? 0 : 1,
               y: 250,
               transition: { delay: 0.3, ...transition },
             }}
@@ -210,7 +210,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 390 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 1850 : 2130) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 1850 : 2080) ? 0 : 1,
               y: 380,
               transition: { delay: 0.3, ...transition },
             }}
@@ -278,7 +278,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 640 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 2480 : 2770) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 2480 : 2730) ? 0 : 1,
               y: 630,
               transition: { delay: 0.3, ...transition },
             }}
@@ -290,7 +290,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 840 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 2800 : 3100) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 2800 : 3030) ? 0 : 1,
               y: 850,
               transition: transition,
               width: "content-fit",
@@ -330,7 +330,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 990 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 3500 : 3735) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 3500 : 3635) ? 0 : 1,
               y: 1000,
               transition: transition,
               width: "content-fit",
@@ -370,7 +370,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 1100 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 4190 : 4325) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 4190 : 4225) ? 0 : 1,
               y: 1150,
               transition: transition,
               width: "content-fit",
