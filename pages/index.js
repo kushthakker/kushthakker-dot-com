@@ -144,7 +144,7 @@ export default function Home() {
       </div>
       <div className="grid grid-flow-row sm:max-w-screen max-w-screen-sm">
         <div
-          className={`flex w-screen h-screen justify-center items-center text-blue font-heading sm:text-6xl text-4xl`}
+          className={`flex w-screen h-screen justify-center items-center text-blue font-heading sm:text-6xl text-3xl`}
         >
           <motion.div
             style={{
