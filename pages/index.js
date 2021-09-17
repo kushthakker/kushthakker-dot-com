@@ -181,7 +181,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 270 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 900 : 920) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 900 : 935) ? 0 : 1,
               y: 250,
               transition: { delay: 0.3, ...transition },
             }}
@@ -210,7 +210,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 390 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 1850 : 2170) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 1850 : 2150) ? 0 : 1,
               y: 380,
               transition: { delay: 0.3, ...transition },
             }}
@@ -330,7 +330,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 990 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 3500 : 3750) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 3500 : 3735) ? 0 : 1,
               y: 1000,
               transition: transition,
               width: "content-fit",
@@ -370,7 +370,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 1100 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 4190 : 4350) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 4190 : 4335) ? 0 : 1,
               y: 1150,
               transition: transition,
               width: "content-fit",
