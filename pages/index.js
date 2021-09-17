@@ -150,7 +150,12 @@ export default function Home() {
             style={{
               scale: scaleAnim,
               y: y <= 450 ? 220 : -230,
-              position: y >= 455 ? "fixed" : "relative",
+              position:
+                dimensions.width > 410
+                  ? y >= 455
+                    ? "fixed"
+                    : "relative"
+                  : "relative",
               zIndex: "50",
             }}
             initial={{ opacity: 0 }}
