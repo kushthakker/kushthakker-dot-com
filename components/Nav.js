@@ -6,7 +6,7 @@ import Home from "./Home.js";
 import { motion } from "framer-motion";
 const Nav = () => {
   return (
-    <motion.div className="w-screen fixed top-5 flex z-50 px-5">
+    <motion.div className="w-screen fixed top-5 flex z-50 px-2">
       <div className="flex justify-start w-full sm:ml-12 ml-1">
         <DarkModeButton />
       </div>
