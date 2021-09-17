@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useCallback } from "react";
 // import useSWR from "swr";
 // import fetch from "../libs/fetch";
 // import ReactRough, { Rectangle } from "react-rough";
@@ -21,45 +22,41 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import ManageMode from "../components/ManageMode.js";
 
-function useWindowSize() {
-  // Initialize state with undefined width/height so server and client renders match
-  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
+function useWindowDimensions() {
+  const hasWindow = typeof window !== "undefined";
+
+  function getWindowDimensions() {
+    const width = hasWindow ? window.innerWidth : null;
+    const height = hasWindow ? window.innerHeight : null;
+    return {
+      width,
+      height,
+    };
+  }
+
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
 
   useEffect(() => {
-    // only execute all the code below in client side
-    if (typeof window !== "undefined") {
-      // Handler to call on window resize
+    if (hasWindow) {
       function handleResize() {
-        // Set window width/height to state
-        setWindowSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
+        setWindowDimensions(getWindowDimensions());
       }
 
-      // Add event listener
       window.addEventListener("resize", handleResize);
-
-      // Call handler right away so state gets updated with initial window size
-      handleResize();
-
-      // Remove event listener on cleanup
       return () => window.removeEventListener("resize", handleResize);
     }
-  }, []); // Empty array ensures that effect is only run on mount
-  return windowSize;
+  }, [hasWindow]);
+
+  return windowDimensions;
 }
 
 export default function Home() {
   const { getTheme, theme } = ManageMode();
   const [y, setY] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
-  const size = useWindowSize();
-
+  const dimensions = useWindowDimensions();
   const { scrollY, scrollYProgress } = useViewportScroll();
   const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 0.8]);
   const yRange = useTransform(scrollYProgress, [0, 1.29], [0, 1]);
@@ -84,8 +81,6 @@ export default function Home() {
       behavior: "smooth",
     });
   };
-
-  console.log(`screen width`, size.width);
 
   return (
     <>
@@ -186,7 +181,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 270 }}
             animate={{
-              opacity: y >= (screen.width > 410 ? 860 : 920) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 860 : 920) ? 0 : 1,
               y: 250,
               transition: { delay: 0.3, ...transition },
             }}
@@ -203,7 +198,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 480 }}
             animate={{
-              opacity: y >= (screen.width > 410 ? 1494 : 1790) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 1494 : 1790) ? 0 : 1,
               y: 460,
               transition: { delay: 0.3, ...transition },
             }}
@@ -215,14 +210,16 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 390 }}
             animate={{
-              opacity: y >= (screen.width > 410 ? 1850 : 2100) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 1850 : 2100) ? 0 : 1,
               y: 380,
               transition: { delay: 0.3, ...transition },
             }}
           >
             <div className="mt-16 w-screen text-center">
               <RoughNotationGroup
-                show={y >= (screen.width > 410 ? 1680 : 1960) ? true : false}
+                show={
+                  y >= (dimensions.width > 410 ? 1680 : 1960) ? true : false
+                }
               >
                 <div className="grid grid-cols-3 gap-3 h-96 sm:w-2/3 w-full mx-auto justify-center content-center">
                   <div>
@@ -281,7 +278,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 640 }}
             animate={{
-              opacity: y >= (screen.width > 410 ? 2494 : 2770) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 2494 : 2770) ? 0 : 1,
               y: 630,
               transition: { delay: 0.3, ...transition },
             }}
@@ -293,7 +290,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 840 }}
             animate={{
-              opacity: y >= (screen.width > 410 ? 2860 : 3050) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 2860 : 3050) ? 0 : 1,
               y: 850,
               transition: transition,
               width: "content-fit",
@@ -333,7 +330,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 990 }}
             animate={{
-              opacity: y >= (screen.width > 410 ? 3540 : 3700) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 3540 : 3700) ? 0 : 1,
               y: 1000,
               transition: transition,
               width: "content-fit",
@@ -373,7 +370,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 1100 }}
             animate={{
-              opacity: y >= (screen.width > 410 ? 4210 : 4310) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 4210 : 4310) ? 0 : 1,
               y: 1150,
               transition: transition,
               width: "content-fit",
