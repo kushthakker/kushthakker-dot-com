@@ -218,7 +218,7 @@ export default function Home() {
             <div className="mt-16 w-screen text-center">
               <RoughNotationGroup
                 show={
-                  y >= (dimensions.width > 410 ? 1620 : 1960) ? true : false
+                  y >= (dimensions.width > 410 ? 1620 : 1940) ? true : false
                 }
               >
                 <div className="grid grid-cols-3 gap-3 h-96 sm:w-2/3 w-full mx-auto justify-center content-center">
@@ -290,7 +290,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 840 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 2820 : 3150) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 2820 : 3100) ? 0 : 1,
               y: 850,
               transition: transition,
               width: "content-fit",
@@ -330,7 +330,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 990 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 3500 : 3800) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 3500 : 3750) ? 0 : 1,
               y: 1000,
               transition: transition,
               width: "content-fit",
@@ -370,7 +370,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 1100 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 4190 : 4410) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 4190 : 4350) ? 0 : 1,
               y: 1150,
               transition: transition,
               width: "content-fit",
@@ -422,7 +422,7 @@ export default function Home() {
               alignItems: "center",
             }}
           >
-            <h1 className="font-heading text-4xl flex justify-center items-center mt-60 tracking-wider mb-96 text-blue-600">
+            <h1 className="font-heading text-4xl flex justify-center items-center mt-60 tracking-wider mb-96 text-blue-600 relative">
               <RoughNotation
                 type="highlight"
                 show={y >= 4600 ? true : false}
@@ -436,7 +436,7 @@ export default function Home() {
       </div>
       <motion.button
         onClick={() => scrollToTop()}
-        className={`fixed hidden top-52 right-12 w-16 border border-black dark:border-white px-4 py-2 sm:flex flex-col rounded justify-center items-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black shadow-2xl dark:shadow-none transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105 active:translate-y-4`}
+        className={`sm:fixed sm:top-52 sm:right-12 w-16 border border-black dark:border-white px-4 py-2 sm:flex flex-col rounded justify-center items-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black shadow-2xl dark:shadow-none transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105 active:translate-y-4 absolute top-10`}
         initial={{ opacity: 0 }}
         animate={{
           opacity: y >= 300 ? 1 : 0,
