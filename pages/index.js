@@ -193,10 +193,10 @@ export default function Home() {
           >
             <div className="flex justify-center items-center sm:max-w-full max-w-screen-sm mx-auto">
               <p className="sm:text-4xl text-3xl sm:w-3/5 w-full font-new px-8 text-center leading-10">
-                I'm a front-end developer based in Ahmedabad. I grew up in
-                Ahmedabad , graduating with a degree in Computer Science. I have
-                a strong passion for design and web development. I spend my free
-                time watching football, formula 1, and designing random stuff.
+                I'm a front-end developer. I grew up in Ahmedabad, graduating
+                with a degree in Computer Science. I have a strong passion for
+                design and web development. I spend my free time watching
+                football, formula 1, and designing random stuff.
               </p>
             </div>
           </motion.div>
