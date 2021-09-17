@@ -74,7 +74,6 @@ export default function Home() {
     setY(y);
   });
 
-  console.log(y);
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
