@@ -13,7 +13,7 @@ const Nav = () => {
       <div className="flex justify-end sm:w-full max-w-sm sm:mr-12">
         <Contact />
         <Github />
-        <Blog />
+        {/* <Blog /> */}
         <Home />
       </div>
     </motion.div>
