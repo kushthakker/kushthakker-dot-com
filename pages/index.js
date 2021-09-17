@@ -21,10 +21,44 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import ManageMode from "../components/ManageMode.js";
 
+function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    // only execute all the code below in client side
+    if (typeof window !== "undefined") {
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+
+      // Call handler right away so state gets updated with initial window size
+      handleResize();
+
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []); // Empty array ensures that effect is only run on mount
+  return windowSize;
+}
+
 export default function Home() {
   const { getTheme, theme } = ManageMode();
   const [y, setY] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
+  const size = useWindowSize();
 
   const { scrollY, scrollYProgress } = useViewportScroll();
   const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 0.8]);
@@ -50,6 +84,8 @@ export default function Home() {
       behavior: "smooth",
     });
   };
+
+  console.log(`screen width`, size.width);
 
   return (
     <>
@@ -84,7 +120,7 @@ export default function Home() {
         />
         <meta property="twitter:url" content="https://kushthakker.com" />
       </Head>
-      <div className="fixed top-52 left-12 w-12">
+      <div className="fixed top-52 left-12 w-12 sm:block hidden">
         <svg className="progress-icon" viewBox="0 0 60 60">
           <motion.path
             fill="none"
@@ -111,12 +147,11 @@ export default function Home() {
           />
         </svg>
       </div>
-      <div className="grid grid-flow-row">
+      <div className="grid grid-flow-row sm:max-w-screen max-w-screen-sm">
         <div
-          className={`flex w-screen h-screen justify-center items-center text-blue`}
+          className={`flex w-screen h-screen justify-center items-center text-blue font-heading sm:text-6xl text-4xl`}
         >
           <motion.div
-            className={`font-heading text-6xl`}
             style={{
               scale: scaleAnim,
               y: y <= 450 ? 220 : -230,
@@ -151,13 +186,13 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 270 }}
             animate={{
-              opacity: y >= 860 ? 0 : 1,
+              opacity: y >= (screen.width > 410 ? 860 : 920) ? 0 : 1,
               y: 250,
               transition: { delay: 0.3, ...transition },
             }}
           >
-            <div className="flex justify-center items-center max-w-full">
-              <p className="text-4xl w-3/5 font-new text-center">
+            <div className="flex justify-center items-center sm:max-w-full max-w-screen-sm mx-auto">
+              <p className="sm:text-4xl text-3xl sm:w-3/5 w-full font-new px-8 text-center leading-10">
                 I'm a front-end developer based in Ahmedabad. I grew up in
                 Ahmedabad , graduating with a degree in Computer Science. I have
                 a strong passion for design and web development. I spend my free
@@ -168,7 +203,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 480 }}
             animate={{
-              opacity: y >= 1494 ? 0 : 1,
+              opacity: y >= (screen.width > 410 ? 1494 : 1790) ? 0 : 1,
               y: 460,
               transition: { delay: 0.3, ...transition },
             }}
@@ -180,14 +215,16 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 390 }}
             animate={{
-              opacity: y >= 1850 ? 0 : 1,
+              opacity: y >= (screen.width > 410 ? 1850 : 2100) ? 0 : 1,
               y: 380,
               transition: { delay: 0.3, ...transition },
             }}
           >
             <div className="mt-16 w-screen text-center">
-              <RoughNotationGroup show={y >= 1680 ? true : false}>
-                <div className="grid grid-cols-3 gap-3 h-96 w-2/3 mx-auto justify-center content-center">
+              <RoughNotationGroup
+                show={y >= (screen.width > 410 ? 1680 : 1960) ? true : false}
+              >
+                <div className="grid grid-cols-3 gap-3 h-96 sm:w-2/3 w-full mx-auto justify-center content-center">
                   <div>
                     <div className="grid col-span-1 col-start-1">
                       <div className="grid grid-flow-row gap-8 text-2xl items-center justify-self-center">
@@ -244,7 +281,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 640 }}
             animate={{
-              opacity: y >= 2494 ? 0 : 1,
+              opacity: y >= (screen.width > 410 ? 2494 : 2770) ? 0 : 1,
               y: 630,
               transition: { delay: 0.3, ...transition },
             }}
@@ -256,7 +293,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 840 }}
             animate={{
-              opacity: y >= 2860 ? 0 : 1,
+              opacity: y >= (screen.width > 410 ? 2860 : 3050) ? 0 : 1,
               y: 850,
               transition: transition,
               width: "content-fit",
@@ -296,7 +333,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 990 }}
             animate={{
-              opacity: y >= 3540 ? 0 : 1,
+              opacity: y >= (screen.width > 410 ? 3540 : 3700) ? 0 : 1,
               y: 1000,
               transition: transition,
               width: "content-fit",
@@ -336,7 +373,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 1100 }}
             animate={{
-              opacity: y >= 4210 ? 0 : 1,
+              opacity: y >= (screen.width > 410 ? 4210 : 4310) ? 0 : 1,
               y: 1150,
               transition: transition,
               width: "content-fit",
@@ -402,7 +439,7 @@ export default function Home() {
       </div>
       <motion.button
         onClick={() => scrollToTop()}
-        className={`fixed top-52 right-12 w-16 border border-black dark:border-white px-4 py-2 flex flex-col rounded justify-center items-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black shadow-2xl dark:shadow-none transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105 active:translate-y-4`}
+        className={`fixed hidden top-52 right-12 w-16 border border-black dark:border-white px-4 py-2 sm:flex flex-col rounded justify-center items-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black shadow-2xl dark:shadow-none transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105 active:translate-y-4`}
         initial={{ opacity: 0 }}
         animate={{
           opacity: y >= 300 ? 1 : 0,
