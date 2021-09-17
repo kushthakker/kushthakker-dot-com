@@ -9,7 +9,7 @@ const DarkModeButton = () => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="sm:py-2 sm:px-4 px-3 py-0 rounded-sm order-2 md:order-3 border ml-5 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black shadow-2xl dark:shadow-none transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105 active:translate-y-3"
+      className="sm:py-2 sm:px-4 px-3 py-2 rounded-sm order-2 md:order-3 border ml-5 border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black shadow-2xl dark:shadow-none transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105 active:translate-y-3"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {getTheme === "dark" ? (
