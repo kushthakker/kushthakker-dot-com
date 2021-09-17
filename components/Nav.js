@@ -5,7 +5,7 @@ import Github from "./Github.js";
 import Home from "./Home.js";
 const Nav = () => {
   return (
-    <div className="w-screen fixed top-5 flex z-50">
+    <div className="w-screen fixed top-5 sm:flex z-50 hidden">
       <div className="flex justify-start w-full ml-12">
         <DarkModeButton />
       </div>
