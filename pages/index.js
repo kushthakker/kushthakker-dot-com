@@ -142,7 +142,7 @@ export default function Home() {
           />
         </svg>
       </div>
-      <div className="grid grid-flow-row sm:max-w-screen max-w-screen-sm">
+      <div className="grid grid-flow-row sm:max-w-11/12 max-w-screen-sm box-border">
         <div
           className={`flex w-screen h-screen justify-center items-center text-blue font-heading sm:text-6xl text-3xl relative -top-16`}
         >
