@@ -176,7 +176,7 @@ export default function Home() {
               transition: { delay: 0.2, ...transition },
             }}
           >
-            <div className="flex justify-center items-center max-w-full flex-col">
+            <div className="flex place-items-center w-screen flex-col absolute top-8 mx-auto">
               <div>Scroll to see more</div>
               <div className="animate-bounce mt-1">
                 <FontAwesomeIcon icon={faArrowDown} />
