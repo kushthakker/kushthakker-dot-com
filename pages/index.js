@@ -226,7 +226,7 @@ export default function Home() {
                   y >= (dimensions.width > 410 ? 1620 : 1940) ? true : false
                 }
               >
-                <div className="grid grid-cols-3 gap-3 h-96 sm:w-2/3 w-full mx-auto justify-center content-center">
+                <div className="grid grid-cols-3 gap-3 h-96 sm:w-2/3 w-full mx-auto justify-center content-center px-5">
                   <div>
                     <div className="grid col-span-1 col-start-1">
                       <div className="grid grid-flow-row gap-8 text-2xl items-center justify-self-center">
