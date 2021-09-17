@@ -144,7 +144,7 @@ export default function Home() {
       </div>
       <div className="grid grid-flow-row sm:max-w-screen max-w-screen-sm">
         <div
-          className={`flex w-screen h-screen justify-center items-center text-blue font-heading sm:text-6xl text-3xl`}
+          className={`flex w-screen h-screen justify-center items-center text-blue font-heading sm:text-6xl text-3xl relative -top-16`}
         >
           <motion.div
             style={{
@@ -164,10 +164,10 @@ export default function Home() {
         </div>
         <div>
           <motion.div
-            initial={{ opacity: 0, y: -110 }}
+            initial={{ opacity: 0, y: -150 }}
             animate={{
               opacity: y >= 10 ? 0 : 1,
-              y: -120,
+              y: -160,
               transition: { delay: 0.2, ...transition },
             }}
           >
@@ -181,7 +181,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 270 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 860 : 920) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 900 : 920) ? 0 : 1,
               y: 250,
               transition: { delay: 0.3, ...transition },
             }}
@@ -196,14 +196,14 @@ export default function Home() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 480 }}
+            initial={{ opacity: 0, y: 410 }}
             animate={{
               opacity: y >= (dimensions.width > 410 ? 1494 : 1790) ? 0 : 1,
-              y: 460,
+              y: 400,
               transition: { delay: 0.3, ...transition },
             }}
           >
-            <div className="flex justify-center items-center mt-60 mb-96 w-screen">
+            <div className="flex justify-center items-center mt-60 mb-60 w-screen">
               <h1 className="font-heading text-4xl">My Skills</h1>
             </div>
           </motion.div>
@@ -218,7 +218,7 @@ export default function Home() {
             <div className="mt-16 w-screen text-center">
               <RoughNotationGroup
                 show={
-                  y >= (dimensions.width > 410 ? 1680 : 1960) ? true : false
+                  y >= (dimensions.width > 410 ? 1620 : 1960) ? true : false
                 }
               >
                 <div className="grid grid-cols-3 gap-3 h-96 sm:w-2/3 w-full mx-auto justify-center content-center">
@@ -290,7 +290,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 840 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 2860 : 3150) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 2820 : 3150) ? 0 : 1,
               y: 850,
               transition: transition,
               width: "content-fit",
@@ -330,7 +330,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 990 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 3540 : 3800) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 3500 : 3800) ? 0 : 1,
               y: 1000,
               transition: transition,
               width: "content-fit",
@@ -370,7 +370,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 1100 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 4210 : 4410) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 4190 : 4410) ? 0 : 1,
               y: 1150,
               transition: transition,
               width: "content-fit",
@@ -422,10 +422,10 @@ export default function Home() {
               alignItems: "center",
             }}
           >
-            <h1 className="font-heading text-4xl flex justify-center items-center mt-48 tracking-wider mb-96 text-blue-600">
+            <h1 className="font-heading text-4xl flex justify-center items-center mt-60 tracking-wider mb-96 text-blue-600">
               <RoughNotation
                 type="highlight"
-                show={y >= 4650 ? true : false}
+                show={y >= 4600 ? true : false}
                 color="yellow"
               >
                 I am open for work.
