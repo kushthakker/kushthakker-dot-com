@@ -181,7 +181,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 270 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 900 : 935) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 900 : 945) ? 0 : 1,
               y: 250,
               transition: { delay: 0.3, ...transition },
             }}
@@ -203,14 +203,14 @@ export default function Home() {
               transition: { delay: 0.3, ...transition },
             }}
           >
-            <div className="flex justify-center items-center mt-60 mb-60 w-screen">
+            <div className="flex justify-center items-center sm:mt-60 mt-40 mb-60 w-screen">
               <h1 className="font-heading text-4xl">My Skills</h1>
             </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 390 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 1850 : 2150) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 1850 : 2130) ? 0 : 1,
               y: 380,
               transition: { delay: 0.3, ...transition },
             }}
@@ -278,7 +278,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 640 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 2494 : 2770) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 2480 : 2770) ? 0 : 1,
               y: 630,
               transition: { delay: 0.3, ...transition },
             }}
@@ -290,7 +290,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 840 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 2820 : 3100) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 2800 : 3100) ? 0 : 1,
               y: 850,
               transition: transition,
               width: "content-fit",
@@ -370,7 +370,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 1100 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 4190 : 4335) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 4190 : 4325) ? 0 : 1,
               y: 1150,
               transition: transition,
               width: "content-fit",
@@ -425,7 +425,7 @@ export default function Home() {
             <h1 className="font-heading text-4xl flex justify-center items-center mt-60 tracking-wider mb-96 text-blue-600 relative">
               <RoughNotation
                 type="highlight"
-                show={y >= 4600 ? true : false}
+                show={y >= 4520 ? true : false}
                 color="yellow"
               >
                 I am open for work.
@@ -436,7 +436,7 @@ export default function Home() {
       </div>
       <motion.button
         onClick={() => scrollToTop()}
-        className={`sm:fixed sm:top-52 sm:right-12 w-16 border border-black dark:border-white px-4 py-2 sm:flex flex-col rounded justify-center items-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black shadow-2xl dark:shadow-none transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105 active:translate-y-4 absolute top-10`}
+        className={`sm:fixed sm:top-52 hidden sm:right-12 w-16 border border-black dark:border-white px-4 py-2 sm:flex flex-col rounded justify-center items-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black shadow-2xl dark:shadow-none transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-105 active:translate-y-4`}
         initial={{ opacity: 0 }}
         animate={{
           opacity: y >= 300 ? 1 : 0,
