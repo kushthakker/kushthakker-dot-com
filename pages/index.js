@@ -87,7 +87,10 @@ export default function Home() {
       <Head>
         <title>Kush Thakker</title>
         <meta name="description" content="Kush Thakker's personal website" />
-        <meta name="keywords" content="kush, thakker, personal, website" />
+        <meta
+          name="keywords"
+          content="kush, thakker, personal, website, kush thakker"
+        />
         <meta property="og:title" content="Kush Thakker" key="title" />
         <meta
           property="og:description"
@@ -103,7 +106,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:title"
-          content="Kush Thakker | Frontend Web Developer"
+          content="Kush Thakker | Front-end Web Developer"
         />
         <meta
           property="twitter:description"
