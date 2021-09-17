@@ -210,7 +210,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 390 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 1850 : 2080) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 1850 : 2055) ? 0 : 1,
               y: 380,
               transition: { delay: 0.3, ...transition },
             }}
@@ -278,7 +278,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 640 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 2480 : 2730) ? 0 : 1,
+              opacity: y >= (dimensions.width > 410 ? 2480 : 2715) ? 0 : 1,
               y: 630,
               transition: { delay: 0.3, ...transition },
             }}
