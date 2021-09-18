@@ -1,6 +1,7 @@
 import DarkModeButton from "./DarkModeToggle.js";
 import Contact from "./Contact.js";
 import Blog from "./Blog.js";
+import Twitter from "./Twitter.js";
 import Github from "./Github.js";
 import Home from "./Home.js";
 import { motion } from "framer-motion";
@@ -13,6 +14,7 @@ const Nav = () => {
       <div className="flex justify-end sm:w-full max-w-sm sm:mr-12">
         <Contact />
         <Github />
+        <Twitter />
         {/* <Blog /> */}
         <Home />
       </div>
