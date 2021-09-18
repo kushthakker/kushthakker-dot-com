@@ -151,7 +151,7 @@ export default function Home() {
               scale: scaleAnim,
               y: y <= 450 ? 220 : -230,
               position:
-                dimensions.width > 410
+                dimensions.width > 600
                   ? y >= 455
                     ? "fixed"
                     : "relative"
@@ -186,7 +186,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 270 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 900 : 955) ? 0 : 1,
+              opacity: y >= (dimensions.width > 600 ? 900 : 955) ? 0 : 1,
               y: 250,
               transition: { delay: 0.3, ...transition },
             }}
@@ -203,7 +203,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 410 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 1494 : 1790) ? 0 : 1,
+              opacity: y >= (dimensions.width > 600 ? 1494 : 1790) ? 0 : 1,
               y: 400,
               transition: { delay: 0.3, ...transition },
             }}
@@ -215,7 +215,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 390 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 1850 : 2055) ? 0 : 1,
+              opacity: y >= (dimensions.width > 600 ? 1850 : 2055) ? 0 : 1,
               y: 380,
               transition: { delay: 0.3, ...transition },
             }}
@@ -223,7 +223,7 @@ export default function Home() {
             <div className="mt-16 w-screen text-center">
               <RoughNotationGroup
                 show={
-                  y >= (dimensions.width > 410 ? 1620 : 1940) ? true : false
+                  y >= (dimensions.width > 600 ? 1620 : 1940) ? true : false
                 }
               >
                 <div className="grid grid-cols-3 gap-3 h-96 sm:w-2/3 w-full mx-auto justify-center content-center px-5">
@@ -283,7 +283,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 640 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 2480 : 2715) ? 0 : 1,
+              opacity: y >= (dimensions.width > 600 ? 2480 : 2715) ? 0 : 1,
               y: 630,
               transition: { delay: 0.3, ...transition },
             }}
@@ -295,7 +295,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 840 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 2800 : 3030) ? 0 : 1,
+              opacity: y >= (dimensions.width > 600 ? 2800 : 3030) ? 0 : 1,
               y: 850,
               transition: transition,
               width: "content-fit",
@@ -335,7 +335,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 990 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 3500 : 3635) ? 0 : 1,
+              opacity: y >= (dimensions.width > 600 ? 3500 : 3635) ? 0 : 1,
               y: 1000,
               transition: transition,
               width: "content-fit",
@@ -375,7 +375,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 1100 }}
             animate={{
-              opacity: y >= (dimensions.width > 410 ? 4190 : 4225) ? 0 : 1,
+              opacity: y >= (dimensions.width > 600 ? 4190 : 4225) ? 0 : 1,
               y: 1150,
               transition: transition,
               width: "content-fit",
