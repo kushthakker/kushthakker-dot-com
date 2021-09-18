@@ -174,11 +174,11 @@ export default function Home() {
             initial={{ opacity: 0, y: -150 }}
             animate={{
               opacity: y >= 10 ? 0 : 1,
-              y: -160,
+              y: -140,
               transition: { delay: 0.2, ...transition },
             }}
           >
-            <div className="flex place-items-center w-screen flex-col absolute top-8 mx-auto">
+            <div className="flex place-items-center w-screen flex-col mx-auto">
               <div>Scroll to see more</div>
               <div className="animate-bounce mt-1">
                 <FontAwesomeIcon icon={faArrowDown} />
