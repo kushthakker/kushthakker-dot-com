@@ -285,7 +285,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 640 }}
             animate={{
-              opacity: y >= (dimensions.width > 600 ? 2480 : 2715) ? 0 : 1,
+              opacity: y >= (dimensions.width > 600 ? 2420 : 2715) ? 0 : 1,
               y: 630,
               transition: { delay: 0.3, ...transition },
             }}
