@@ -432,7 +432,7 @@ export default function Home() {
             <h1 className="font-heading text-4xl flex justify-center items-center mt-60 tracking-wider mb-96 text-blue-600 relative">
               <RoughNotation
                 type="highlight"
-                show={y >= 4520 ? true : false}
+                show={y >= 4420 ? true : false}
                 color="yellow"
               >
                 I am open for work.
