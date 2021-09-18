@@ -225,7 +225,7 @@ export default function Home() {
             <div className="mt-16 w-screen text-center">
               <RoughNotationGroup
                 show={
-                  y >= (dimensions.width > 410 ? 1620 : 1940) ? true : false
+                  y >= (dimensions.width > 410 ? 1620 : 1910) ? true : false
                 }
               >
                 <div className="grid grid-cols-3 gap-3 h-96 sm:w-2/3 w-full mx-auto justify-center content-center px-5">
