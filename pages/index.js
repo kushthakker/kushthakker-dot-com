@@ -109,7 +109,7 @@ export default function Home() {
         />
         <meta
           property="twitter:description"
-          content="Kush Thakker's personal website"
+          content="Hey, I'm a front-end developer. Checkout my website to learn more about me and my work."
         />
         <meta
           property="twitter:image"
