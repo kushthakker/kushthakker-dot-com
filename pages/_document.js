@@ -5,6 +5,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en" className="w-screen h-screen overflow-y-auto dark">
         <Head>
+        <meta name="google-site-verification" content="jiXG1Lv_8pAfgJTXA6coEer9y3_MBEFjiPmgALO1WpE" />
           <link
             href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
             rel="stylesheet"
