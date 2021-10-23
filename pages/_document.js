@@ -18,13 +18,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Jost:ital@1&display=swap"
             rel="stylesheet"
           />
-          <script
-            defer
-            type="text/javascript"
-            src="https://api.pirsch.io/pirsch.js"
-            id="pirschjs"
-            data-code="1H7yGCFPHHOJEl6oX7TGZ2TKXAK8eSPR"
-          ></script>
         </Head>
         <body>
           <Main />
