@@ -322,7 +322,7 @@ export default function Home() {
               </div>
               <div className="flex border-dashed border-t-2 border-b-2 border-black dark:border-white p-4 mt-14 uppercase text-body text-xl px-8">
                 <div className="flex justify-start w-full items-center">
-                  <a target="_blank" href="https://gamify-dev.vercel.app/ ">
+                  <a target="_blank" href="https://gamify-phi.vercel.app/">
                     Gamify
                   </a>
                 </div>
