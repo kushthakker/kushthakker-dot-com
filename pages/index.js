@@ -195,10 +195,10 @@ export default function Home() {
           >
             <div className="flex justify-center items-center sm:max-w-full max-w-screen-sm mx-auto">
               <p className="sm:text-4xl text-3xl sm:w-3/5 w-full font-new px-8 text-center leading-10">
-              I'm a Full-Stack Web Developer. I grew up in Ahmedabad, graduating
-                with a degree in Computer Science. I have a strong passion for
-                design and web development. I spend my free time watching
-                football, formula 1, and designing random stuff.
+                I'm a Full-Stack Web Developer. I grew up in Ahmedabad,
+                graduating with a degree in Computer Science. I have a strong
+                passion for design and web development. I spend my free time
+                watching football, formula 1, and designing random stuff.
               </p>
             </div>
           </motion.div>
@@ -229,7 +229,7 @@ export default function Home() {
                 }
               >
                 <div className="grid grid-cols-3 gap-3 h-96 sm:w-2/3 w-full mx-auto justify-center content-center px-5">
-                  <div>
+                  {/* <div>
                     <div className="grid col-span-1 col-start-1">
                       <div className="grid grid-flow-row gap-8 text-2xl items-center justify-self-center">
                         <h1 className="font-body text-4xl mb-8">Languages</h1>
@@ -244,9 +244,9 @@ export default function Home() {
                         </RoughNotation>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div>
-                    <div className="grid col-span-1 col-start-2">
+                    <div className="grid col-span-1 col-start-1">
                       <div className="grid grid-flow-row gap-8 text-2xl justify-self-center">
                         <h1 className="font-body text-4xl mb-8">Library</h1>
                         <RoughNotation type="underline" order="1">
@@ -255,7 +255,7 @@ export default function Home() {
                         <RoughNotation type="underline" order="1">
                           <h3>Redux</h3>
                         </RoughNotation>
-                        <RoughNotation type="box" order="2">
+                        <RoughNotation type="circle" order="3">
                           <h3>Tailwind css</h3>
                         </RoughNotation>
                         <RoughNotation type="underline" order="1">
@@ -268,11 +268,27 @@ export default function Home() {
                     </div>
                   </div>
                   <div>
-                    <div className="grid col-span-1 col-start-3">
+                    <div className="grid col-span-1 col-start-2">
                       <div className="grid grid-flow-row gap-8 text-2xl justify-self-center">
                         <h1 className="font-body text-4xl mb-8">Framework</h1>
                         <RoughNotation type="underline" order="1">
                           <h3>Next Js</h3>
+                        </RoughNotation>
+                        <RoughNotation type="box" order="2">
+                          <h3>Express Js</h3>
+                        </RoughNotation>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="grid col-span-1 col-start-3">
+                      <div className="grid grid-flow-row gap-8 text-2xl justify-self-center">
+                        <h1 className="font-body text-4xl mb-8">Database</h1>
+                        <RoughNotation type="box" order="2">
+                          <h3>Mongo DB</h3>
+                        </RoughNotation>
+                        <RoughNotation type="box" order="2">
+                          <h3>Prisma ORM</h3>
                         </RoughNotation>
                       </div>
                     </div>
