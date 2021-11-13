@@ -1,1 +1,1 @@
-## Tailwind next.js boilerplate
+## Personal Portfolio of Kush Thakker
