@@ -105,7 +105,7 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:title"
-          content="Kush Thakker | Front-end Web Developer"
+          content="Kush Thakker | Full-Stack Web Developer"
         />
         <meta
           property="twitter:description"
