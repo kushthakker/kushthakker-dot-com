@@ -169,7 +169,7 @@ export default function Home() {
             Hey, I'm Kush Thakker
           </motion.div>
         </div>
-        <div>
+        <div className="max-w-full">
           <motion.div
             initial={{ opacity: 0, y: -150 }}
             animate={{
@@ -177,6 +177,7 @@ export default function Home() {
               y: -140,
               transition: { delay: 0.2, ...transition },
             }}
+            // className="w-full flex items-center"
           >
             <div className="flex place-items-center w-screen flex-col mx-auto">
               <div>Scroll to see more</div>
@@ -194,7 +195,7 @@ export default function Home() {
             }}
           >
             <div className="flex justify-center items-center sm:max-w-full max-w-screen-sm mx-auto">
-              <p className="sm:text-4xl text-3xl sm:w-3/5 w-full font-new px-8 text-center leading-10">
+              <p className="sm:text-4xl text-2xl sm:w-3/5 w-full font-new px-8 text-center leading-10">
                 I'm a Full-Stack Web Developer. I grew up in Ahmedabad,
                 graduating with a degree in Computer Science. I have a strong
                 passion for design and web development. I spend my free time
@@ -451,7 +452,14 @@ export default function Home() {
                 show={y >= 4420 ? true : false}
                 color="yellow"
               >
-                I am open for work.
+                Intern at{" "}
+                <a
+                  href="https://twitter.com/GalaxEye"
+                  target="_blank"
+                  rel="twitter of galaxeye"
+                >
+                  Galaxeye
+                </a>
               </RoughNotation>
             </h1>
           </motion.div>
