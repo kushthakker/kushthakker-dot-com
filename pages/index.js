@@ -452,7 +452,7 @@ export default function Home() {
                 show={y >= 4420 ? true : false}
                 color="yellow"
               >
-                Intern at{" "}
+                Head of Product Operations at {" "}
                 <a
                   href="https://twitter.com/GalaxEye"
                   target="_blank"
