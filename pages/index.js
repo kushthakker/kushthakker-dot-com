@@ -105,11 +105,11 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:title"
-          content="Kush Thakker | Full-Stack Web Developer"
+          content="Kush Thakker"
         />
         <meta
           property="twitter:description"
-          content="Hey, I'm a Full-Stack Web Developer. Checkout my website to learn more about me and my work."
+          content="Hey, I'm Kush Thakker. Checkout my website to learn more about me and my work."
         />
         <meta
           property="twitter:image"
@@ -196,10 +196,12 @@ export default function Home() {
           >
             <div className="flex justify-center items-center sm:max-w-full max-w-screen-sm mx-auto">
               <p className="sm:text-4xl text-2xl sm:w-3/5 w-full font-new px-8 text-center leading-10">
-                I'm a Full-Stack Web Developer. I grew up in Ahmedabad,
+                A creative freak who grew up in Ahmedabad,
                 graduating with a degree in Computer Science. I have a strong
-                passion for design and web development. I spend my free time
-                watching football, formula 1, and designing random stuff.
+                passion for design and building products. I spend my free time
+                watching football, formula 1, and backpacking. Currently put up
+                in Bangalore to build the constellation of 
+                earth observation satellites.
               </p>
             </div>
           </motion.div>
@@ -271,12 +273,18 @@ export default function Home() {
                   <div>
                     <div className="grid col-span-1 col-start-2">
                       <div className="grid grid-flow-row gap-8 text-2xl justify-self-center">
-                        <h1 className="font-body text-4xl mb-8">Framework</h1>
+                        <h1 className="font-body text-4xl mb-8">Skills</h1>
                         <RoughNotation type="underline" order="1">
-                          <h3>Next Js</h3>
+                          <h3>Architecture Design</h3>
                         </RoughNotation>
                         <RoughNotation type="box" order="2">
-                          <h3>Express Js</h3>
+                          <h3>Cloud Infrastructure</h3>
+                        </RoughNotation>
+                        <RoughNotation type="box" order="2">
+                          <h3>Kafka</h3>
+                        </RoughNotation>
+                        <RoughNotation type="box" order="2">
+                          <h3>Full stack dev</h3>
                         </RoughNotation>
                       </div>
                     </div>
@@ -289,7 +297,13 @@ export default function Home() {
                           <h3>Mongo DB</h3>
                         </RoughNotation>
                         <RoughNotation type="box" order="2">
-                          <h3>Prisma ORM</h3>
+                          <h3>PostgreSQL</h3>
+                        </RoughNotation>
+                        <RoughNotation type="box" order="2">
+                          <h3>Cassandra</h3>
+                        </RoughNotation>
+                        <RoughNotation type="box" order="2">
+                          <h3>CouchBase</h3>
                         </RoughNotation>
                       </div>
                     </div>
