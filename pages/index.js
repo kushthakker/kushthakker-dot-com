@@ -286,7 +286,7 @@ export default function Home() {
                         <RoughNotation type="circle" order="1">
                           <h3>Kafka</h3>
                         </RoughNotation>
-                        <RoughNotation type="cirlce" order="1">
+                        <RoughNotation type="underline" order="2">
                           <h3>Full stack dev</h3>
                         </RoughNotation>
                       </div>
