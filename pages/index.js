@@ -252,19 +252,19 @@ export default function Home() {
                     <div className="grid col-span-1 col-start-1">
                       <div className="grid grid-flow-row gap-8 text-2xl justify-self-center">
                         <h1 className="font-body text-4xl mb-8">Library</h1>
-                        <RoughNotation type="underline" order="1">
+                        <RoughNotation type="underline" order="2">
                           <h3>React</h3>
                         </RoughNotation>
-                        <RoughNotation type="underline" order="1">
+                        <RoughNotation type="underline" order="2">
                           <h3>Redux</h3>
                         </RoughNotation>
-                        <RoughNotation type="circle" order="3">
+                        <RoughNotation type="underline" order="4">
                           <h3>Tailwind css</h3>
                         </RoughNotation>
-                        <RoughNotation type="underline" order="1">
+                        <RoughNotation type="underline" order="2">
                           <h3>React Query</h3>
                         </RoughNotation>
-                        <RoughNotation type="underline" order="1">
+                        <RoughNotation type="underline" order="2">
                           <h3>Framer Motion</h3>
                         </RoughNotation>
                       </div>
@@ -273,17 +273,20 @@ export default function Home() {
                   <div>
                     <div className="grid col-span-1 col-start-2">
                       <div className="grid grid-flow-row gap-8 text-2xl justify-self-center">
-                        <h1 className="font-body text-4xl mb-8">Skills</h1>
-                        <RoughNotation type="underline" order="1">
+                        <h1 className="font-body text-4xl mb-8">Expertise</h1>
+                        <RoughNotation type="circle" order="1">
                           <h3>Architecture Design</h3>
                         </RoughNotation>
-                        <RoughNotation type="box" order="2">
+                        <RoughNotation type="circle" order="1">
+                          <h3>Product thinking</h3>
+                        </RoughNotation>
+                        <RoughNotation type="circle" order="1">
                           <h3>Cloud Infrastructure</h3>
                         </RoughNotation>
-                        <RoughNotation type="box" order="2">
+                        <RoughNotation type="circle" order="1">
                           <h3>Kafka</h3>
                         </RoughNotation>
-                        <RoughNotation type="box" order="2">
+                        <RoughNotation type="cirlce" order="1">
                           <h3>Full stack dev</h3>
                         </RoughNotation>
                       </div>
@@ -293,17 +296,17 @@ export default function Home() {
                     <div className="grid col-span-1 col-start-3">
                       <div className="grid grid-flow-row gap-8 text-2xl justify-self-center">
                         <h1 className="font-body text-4xl mb-8">Database</h1>
-                        <RoughNotation type="box" order="2">
-                          <h3>Mongo DB</h3>
-                        </RoughNotation>
-                        <RoughNotation type="box" order="2">
+                        <RoughNotation type="box" order="3">
                           <h3>PostgreSQL</h3>
                         </RoughNotation>
-                        <RoughNotation type="box" order="2">
+                        <RoughNotation type="box" order="3">
                           <h3>Cassandra</h3>
                         </RoughNotation>
-                        <RoughNotation type="box" order="2">
+                        <RoughNotation type="box" order="3">
                           <h3>CouchBase</h3>
+                        </RoughNotation>
+                        <RoughNotation type="box" order="3">
+                          <h3>Redis</h3>
                         </RoughNotation>
                       </div>
                     </div>
